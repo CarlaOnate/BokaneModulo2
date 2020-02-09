@@ -8,6 +8,10 @@
 body {
   background: none; }
 
+#bokane-title{
+  font-size: 3rem;
+}
+
 #button-google {
   padding-top: 10%; }
 
@@ -21,7 +25,11 @@ a {
   font-size: 2rem; }
 
 #navbar-color {
-  background-color: #2C5559; }
+  border-left: 10px solid #225473;
+  border-right: 10px solid #225473;
+  background: rgba(171, 191, 99, .4);
+
+}
 
 #suscribe-text {
   font-size: larger; }
@@ -32,8 +40,6 @@ a {
 #sus-email {
   padding-left: 20%; }
 
-#desc-bokane {
-  background: url("https://res.cloudinary.com/dxxdamndt/image/upload/v1581205991/IMG_4624_2_g0pn5f.jpg"); }
 
 #camping {
   display: flex;
@@ -43,9 +49,24 @@ a {
   margin: 10%;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
+
+.title{
+  color: #2C5559;
+}
 
 #camping-info-container {
   display: flex;
   width: 40%; }
 
+.btn-verde{
+  background: #5C7345;
+  color: white;
+}
+
+#waterski{
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */
