@@ -247,6 +247,23 @@ a {
   flex-flow: row wrap;
 }
 
-#profile-title{
+// #profile-title{
   
+// }
+
+#edit-act-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+#edit-act-form form{
+  align-self: center;
+}
+
+
+#edit-act-form h3{
+  font-size: 2rem;
 }

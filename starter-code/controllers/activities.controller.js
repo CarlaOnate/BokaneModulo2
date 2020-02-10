@@ -1,6 +1,5 @@
 const User = require('../models/User')
 const Activity = require('../models/Activity')
-// let {isAuthenticated} = require('../middleware/index')
 
 
 exports.activity = async (req, res) => {
@@ -16,10 +15,22 @@ exports.activity = async (req, res) => {
       time: time
     })
     await user.activities.push(newAct._id)
-    user.save()
+    await user.save()
     res.redirect('/profile')
   } else {
     res.render('activities', {showError: true})
   }
 }
 
+exports.editView = async (req, res) => {
+  let act = await Activity.findById(req.params.id_act)
+  res.render('editAct', act)
+}
+
+
+exports.edit = async (req, res) => {
+  let{typeAct, time, numberPeople} = req.body
+  let act = await Activity.findByIdAndUpdate(req.params.id_act, {numPeople: numberPeople, typeAct, time })
+  res.redirect('/profile')
+  // res.redirect(304, '/profile')
+}

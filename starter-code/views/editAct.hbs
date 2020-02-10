@@ -1,0 +1,25 @@
+<section id="edit-act-form">
+<h3 class="p-2">Edit Activity</h3>
+<div class="w-25 text-center">
+  <form action="/activities/{{_id}}" method="put">
+     <label>What type of activity?</label>
+   <select name="typeAct" class="form-control">
+     <option>kayak</option>
+     <option>climbing</option>
+     <option>hiking</option>
+   </select>
+     <label>At what time?</label>
+   <select name="time" class="form-control">
+     <option>8:00</option>
+     <option>10:00</option>
+     <option>14:00</option>
+     <option>18:00</option>
+   </select>
+   <div class="form-group">
+     <label>Number of people:</label>
+     <input required name="numberPeople" type="text" class="form-control" id="" value="{{numPeople}}">
+   </div>
+   <input type="submit" class="btn btn-verde btn-act" value="Edit">
+  </form>
+</div>
+</section>

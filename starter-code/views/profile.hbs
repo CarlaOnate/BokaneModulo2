@@ -13,10 +13,10 @@
       <p class="card-text">This activity was scheduled and the amount of people that will go are {{this.numPeople}}</p>
   {{/if}}
       <div id="buttons-card">
-        <form method="PUT">
+        <form action="/activities/{{this._id}}" method="PUT">
           <input type="submit" class="btn btn-verde m-2" value="Edit">
         </form>
-        <form method="DELETE">
+        <form action="/activities/{{this._id}}" method="DELETE">
           <input type="submit" class="btn text-white btn-danger m-2" value="Delete">
         </form>
       </div>

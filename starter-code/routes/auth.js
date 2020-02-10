@@ -17,7 +17,7 @@ router.post(
 )
 
 router.get(
-    "/auth/google",
+    "/google",
     passport.authenticate("google", {
       scope: [
         "https://www.googleapis.com/auth/userinfo.profile",
@@ -27,7 +27,7 @@ router.get(
 )
 
 router.get(
-    "/auth/google/callback",
+    "/google/callback",
     passport.authenticate("google", {
       successRedirect: "/",
       failureRedirect: "/login"
