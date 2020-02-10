@@ -10,6 +10,14 @@ const userSchema = new Schema({
         type: String,
         enum: ["ADMIN", "GUEST"],
         default: "GUEST"
+    },
+    reservations: {
+        type: [Schema.Types.ObjectId],
+        default: []
+    },
+    activities: {
+        type: [Schema.Types.ObjectId],
+        default: []
     }
 },{
     timestamps: true,
