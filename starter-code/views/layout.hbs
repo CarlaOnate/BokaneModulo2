@@ -19,7 +19,11 @@
         </a>
         <ul class="navbar-nav">
           <li class="nav-item active">
+            {{#if profile}}
+            <a class="nav-link pt-3 pb-0 px-2 badge" href="/profile" style="font-size: 1.4rem;">Profile</a>
+            {{else}}
             <a class="nav-link pt-3 pb-0 px-2 badge" href="/auth/login" style="font-size: 1.4rem;">Login</a>
+            {{/if}}
           </li>
         </ul>
       </div>

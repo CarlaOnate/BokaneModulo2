@@ -197,4 +197,16 @@ a {
   width: 40%;
   margin-bottom: 5%; }
 
+#act-cards {
+  width: 30%;
+  height: 30%;
+  display: flex;
+  flex-flow: row wrap;
+  float: right;
+  padding: 5%; }
+
+#buttons-card {
+  display: flex;
+  flex-flow: row wrap; }
+
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,9 @@
+const User = require('../models/User')
+const Activity = require('../models/Activity')
 
-exports.profileView = (req, res) => {
-    res.render('profile')
+exports.profileView = async (req, res) => {
+    let activities = await Activity.find({user_id: req.user._id})
+    res.render('profile', {activities})
 }
 
 exports.campingView = (req, res) => {

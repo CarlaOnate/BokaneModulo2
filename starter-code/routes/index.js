@@ -4,7 +4,8 @@ const {profileView, campingView, actView} = require('../controllers')
 const {isAuthenticated} = require('../middleware')
 
 router.get('/', (req, res, next) => {
-  res.render('index', {show:false});
+  if(req.isAuthenticated()) return res.render('index', {show:false, profile:true});
+  res.render('index', {show:false, profile:false});
 });
 
 router.get('/profile', isAuthenticated, profileView)

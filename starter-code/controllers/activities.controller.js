@@ -1,6 +1,6 @@
 const User = require('../models/User')
 const Activity = require('../models/Activity')
-let {isAuthenticated} = require('../middleware/index')
+// let {isAuthenticated} = require('../middleware/index')
 
 
 exports.activity = async (req, res) => {

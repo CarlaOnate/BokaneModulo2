@@ -1,1 +1,30 @@
-<h1>Profile</h1>
+<section id="profile">
+<h2 id="profile-title">Profile</h2>
+<div data-spy="scroll" data-target="#card-scroll" data-offset="0" class="scrollspy-example" id="act-cards">
+  {{!-- NO JALA ESTO DEL SCROLL PERO NO SE VE MAL ASI --}}
+  <div id="card-scroll">
+  {{#each activities}}
+ <div class="card m-1 act-card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{this.typeAct}}</h5>
+  {{#if this.time}}
+      <p class="card-text">This activity was scheduled at {{this.time}} and the amount of people that will go are {{this.numPeople}}</p>
+  {{else}}
+      <p class="card-text">This activity was scheduled and the amount of people that will go are {{this.numPeople}}</p>
+  {{/if}}
+      <div id="buttons-card">
+        <form method="PUT">
+          <input type="submit" class="btn btn-verde m-2" value="Edit">
+        </form>
+        <form method="DELETE">
+          <input type="submit" class="btn text-white btn-danger m-2" value="Delete">
+        </form>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+  </div>
+</div>
+
+</section>
+
