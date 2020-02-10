@@ -1,115 +1,22 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/c6832721e6.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href='stylesheets/style.css'>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/style.css"/>
+    <script src="https://kit.fontawesome.com/c6832721e6.js" crossorigin="anonymous"></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
+  </head>
 <body>
-  <!-- NAV BAR EN LAYOUT -->
-  <!-- <div>
-    <nav style="background-color: #2C5559;" id="navbar-color" class="navbar navbar-expand-lg navbar-light">
-      <div id="navbarNav" class="d-flex justify-content-between w-100">
-        <a class="navbar-brand" href="/">
-          <img id="logo-image" src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581191814/tent_ifvsz2.png" width="40" height="40" class="d-inline-block align-top ml-4" alt="CompanyLogo">
-        </a>
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link pr-5 pt-2" href="/auth/login" style="font-size: 1.4rem; color: white;">Login</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div> -->
-  <!-- FIN NAV BAR EN LAYOUT -->
- <!-- SECTION 1 BOKANE EXPLICACION -->
-  <!-- <section id="desc-bokane" class='d-flex align-items-md-start flex-md-column pl-5 pt-5 ml-3'>
-    <div id="intro-bokane" class="w-75">
-      <h3 id="bokane-title">Bokané</h3>
-      <p>Nosotros estamos comprometidos con el cuidado del ambiente por lo que aqui podras vivir una experiencia única ecoturística. 
-        Nuestro terreno se ubica en Chiapas cerca de un pueblo llamado Boca del Cielo, en este brazo de mar podrás disfrutar la belleza tanto del manglar como del mar.
-        Este lugar es tierra virgen por lo que se puede pasear por el manglar y encontrar mucha fauna. <br> Te interesa disfrutar algunas vacaciones aqui?<br> Suscribete a nuestro newsletter y te daremos un <strong>10% de descuento</strong>
-      </p> -->
-      <!-- <img id="bokane-img" src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581205991/IMG_4624_2_g0pn5f.jpg"> -->
-    <!-- </div>
-    <div id="sus-email" class="align-self-center ml-5">
-      <form class="form-inline">
-        <div class="form-group mx-sm-3 mb-2">
-          <label id ="suscribe-text"class="pr-2" for="inputPassword2">Suscribe:</label>
-          <input type="email" class="form-control form-control-sm" id="inputPassword2" placeholder="Email">
-        </div>
-        <button type="submit" class="btn mb-2 form-control-sm">Suscribe</button>
-      </form>
-    </div>
-  </section> -->
-  <!-- FIN SECTION ONE BOKANE EXPLICACION  -->
-  <!-- MAPBOX -->
-  <!-- <h4 id="map-title" class="text-center">Where are we?</h4>
-  <div id="map-container">
-    <div id='map' class="" style='width: 95vw; height: 400px;'></div>
-  </div> -->
-  <!-- FINAL MAPBOX -->
- <!-- SECCION CAMPING -->
- <!-- <section id="camping">
-   <div id="camping-info-container">
-     <h4>Camping</h4>
-     <p>WRITE STH IMPORTANT HERE BECAUSE I DONT KNOW WHAT TO PUT AND CHANGE THE ABOVE TO SPANISH</p>
-     <form action="/reservation" method="GET">
-      <input type="submit" value="Reservation" class="btn mb-2 form-control-sm">
-     </form>
-   </div>
-   <div id="camp-img-cont">
-     <img id="camping-img" src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581213485/IMG_2427_rx5pyz.jpg" alt="Camping image">
-   </div>
- </section> -->
- <!-- FIN SECCINO CAMPING -->
- <!-- ACTIVITIES SECTION  -->
- <!-- <section class="justify-content-between pl-5" id="Activites">
-  <div id="act-info-container" class="">
-    <h4 class="text-md-center pr-3 " id="act-title">Activities</h4>
-      <div class="row justify-content-around w-100">
-        <div class="col-3 px-5 pt-2">
-          <h4 class="text-md-center">Kayaking</h4>
-          <p class="text-wrap text-justify">We provide several kayaks so you can go to the manglar and hace some fun</p>
-          <i class=""></i>
-        </div>
-        <div class="col-3 px-5 pt-2">
-          <h4 class="text-md-center">Climbing</h4>
-          <p class="text-wrap text-justify">There are some mountains that you can go and have some fun, we can provide all the equipment you need</p>
-        </div>
-        <div class="col-3 px-5 pt-2">
-          <h4 class="text-md-center">Waterski</h4>
-          <p class="text-wrap text-justify">You can try this exciting new activity if you haven't already here in this paradise</p>
-        </div>
-      </div>
-      <form class="d-flex justify-content-center" action="/activities" method="GET">
-        <div>
-          <input type="submit" value="More info" class="form-control-mg m-5 btn-lg btn">
-        </div>
-      </form>
-  </div>
-</section> -->
- <!-- FINAL SECTINO ACTIVITIES -->
-<!-- INITIAL FOOTER  -->
-  <!-- <footer>
-  <div class="justify-content-md-center text-center p-5">
-    <p>Bokane</p>
-    <p>Contact:</p>
-    <ul id="footer-info"  class="w-25 list-group list-group-flush ml-auto mr-auto">
-      <li class="list-group-item">Phone: 5524678930**</li>
-      <li class="list-group-item">Email: bokane@contact.com</li>
-    </ul>
-  </div>
-  </footer> -->
-<!-- FINISH FOOTER  -->
- <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src='https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js'></script>
-<script src="javascripts/script.js"></script>
-</body> -->
-<!-- </html> --> 
+
+
+
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ <script src='https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js'></script>
+ <script src="/javascripts/script.js"></script>
+</body>
+</html>

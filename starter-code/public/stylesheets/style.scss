@@ -14,6 +14,10 @@ body {
 #logo-image {
   padding: 10%; }
 
+#bokane-title{
+  font-size: 3rem;
+}
+
 a {
   text-decoration: none; }
 
@@ -21,7 +25,10 @@ a {
   font-size: 2rem; }
 
 #navbar-color {
-  background-color: #2C5559; }
+  border-left: 10px solid #225473;
+  border-right: 10px solid #225473;
+  background: rgba(171, 191, 99, .4);
+}
 
 #suscribe-text {
   font-size: larger; }
@@ -31,9 +38,6 @@ a {
 
 #sus-email {
   padding-left: 20%; }
-
-#desc-bokane {
-  background: url("https://res.cloudinary.com/dxxdamndt/image/upload/v1581205991/IMG_4624_2_g0pn5f.jpg"); }
 
 #camping {
   display: flex;
@@ -49,3 +53,120 @@ a {
   display: flex;
   width: 40%; }
 
+.title{
+  color: #2C5559;
+}
+
+.btn-verde{
+  background: #5C7345;
+  color: white;
+}
+
+#waterski{
+  color: black;
+}
+
+#footer-card{
+  box-shadow: 5px 5px 5px #2C5559;
+}
+
+.ser-title{
+  font-size: 2.2rem;
+}
+
+#restImg-order{
+  // order: 5;
+  width: 35%;
+}
+
+#boat{
+  width: 30%;
+}
+
+#cam-title{
+  font-size: 3.9rem;
+  color: #225473;
+  padding-left: 10%;
+  padding-bottom: 2%;
+  width: 50%;
+}
+
+
+.camp-list{
+  padding-top: 2%;
+  width: 30%;
+  align-items: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.camp-list img{
+  padding-bottom: 5%;
+}
+
+#section-camping{
+  padding-left: 3vw;
+  font-size: 1rem;
+  width: 95vw;
+}
+
+#section-camping a:first-of-type{
+  margin-right: 20%;
+  margin-left: 70%;
+  margin-bottom: 5%;
+}
+
+.ul-camping{
+  text-decoration: none;
+  list-style: none;
+  box-sizing: none;
+  align-self: stretch;
+  justify-content: center;
+}
+
+.ul-camping li{
+  background: rgba(92, 115, 69, .2);
+  box-shadow: 1px 1px 1px #ABBF63;
+}
+
+
+.camp-icon{
+  width: 12%;
+  margin-left: 6%;
+}
+
+.carousel-item img{
+  max-width: 100%;
+  height: auto;
+}
+
+#gallery-title{
+  padding-left: 40%;
+  padding-bottom: 1%;
+  padding-top: 6%;
+  font-size: 3rem;
+}
+
+#act-title{
+  padding-bottom: 1%;
+  font-size: 3rem;
+}
+
+#restaurant-list li{
+  background: none;
+  box-shadow: none;
+}
+
+.gallery-camp{
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 90vw;
+  padding-bottom: 3%;
+}
+
+.carousel-inner{
+  width:100%;
+  max-height: auto;
+}
