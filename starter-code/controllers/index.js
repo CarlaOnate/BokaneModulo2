@@ -8,5 +8,10 @@ exports.campingView = (req, res) => {
 }
 
 exports.actView = (req, res) => {
-    res.render('activities')
+    if(req.isAuthenticated()){
+        let {name, _id} = req.user
+        res.render('activities', {name, _id})
+    } else {
+        res.render('activities', {showError: true})
+    }
 }
