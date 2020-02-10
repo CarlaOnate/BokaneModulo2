@@ -1,4 +1,4 @@
 
-// exports.suscribeView = () => {
-//   res.render('index', {msg: 'El correo fue registrado exitosamente'})
-// }
+exports.suscribeView = (req, res) => {
+  res.render('index', {msg: 'El correo fue registrado exitosamente', show:true})
+}

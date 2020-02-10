@@ -1,4 +1,6 @@
-// const router = require('express').Router()
-// const {} = require('../controllers')
+const router = require('express').Router()
+const {suscribeView} = require('../controllers/suscribe.controller')
 
-// router.get('/', suscribeView)
+router.post('/', suscribeView)
+
+module.exports = router
