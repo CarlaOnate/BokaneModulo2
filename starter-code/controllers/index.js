@@ -6,3 +6,7 @@ exports.profileView = (req, res) => {
 exports.campingView = (req, res) => {
     res.render('camping')
 }
+
+exports.actView = (req, res) => {
+    res.render('activities')
+}

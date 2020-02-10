@@ -2,8 +2,9 @@
       <h2 id="cam-title" class="h1 pt-5">Camping<img class="camp-icon" src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581289307/camping-tent_qy6hk1.png"></h2>
   <div class="text-center w-75 pb-1 ml-auto mr-auto">
     <p>We offer several places to camp, wether you choose to camp on the beach or next to the mangrove. There are some services we provide so that your stay here can be more pleasant.</p>
+    <p>The charge is <strong>$100 pesos</strong> a night per person and there is no extra fee for pets.</p>
   </div>
-  <a class="btn btn-lg btn-verde" href="/camping/:id_user">Reservations</a>
+  <a class="btn btn-lg btn-verde" href="#reservation">Reservations</a>
   <ul class="ul-camping list-group list-group-horizontal list-unstyled w-100">
     <li class="list-group-item d-flex camp-list">
       <img src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581285435/IMG_4281_jtegeh.jpg" class=" align-self-center rounded-lg w-75" alt="Bathroomsimage">
@@ -68,3 +69,36 @@
       </a>
     </div>
   </section>
+
+
+  <section id="reservation">
+      <h3 id="reservation-title">Reservation</h3>
+    <form action="/camping/:id_user" method="POST"> <!--PONER AQUI EL ID DEL USUARIO-->
+        <div class="form-group">
+          <label for="exampleInputEmail1">Full name</label>
+          <input name="name" type="text" class="form-control" id="" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">When do yo arrive?</label>
+          <input name="date" type="Date" class="form-control" id="" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">How many nights?</label>
+          <input name="nights" type="number" class="form-control" id="" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+            <input name="transport" type="checkbox" aria-label="Checkbox for following text input">
+            <label for="exampleInputEmail1" class="mr-2">Need transport from the airport?</label>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Any extra informationn:</label>
+          <input name="comments" type="text" class="form-control" id="" aria-describedby="emailHelp">
+        </div>
+        <p><strong>Total price: $PONER PRECIO QUE CALCULE</strong></p>
+        <p class="bg-info text-white w-75 rounded p-1">Payment is on arrival to the hotel</p>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {{!-- {{#if req.user}} --}}
+    <a href="/auth/login"><strong class="badge badge-pill badge-warning p-3 mt-3">You need to have an account to make a reservation, Click here to sign up</strong></a>
+    {{!-- {{/if}} --}}
+</section>

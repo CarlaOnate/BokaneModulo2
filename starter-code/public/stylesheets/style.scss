@@ -170,3 +170,65 @@ a {
   width:100%;
   max-height: auto;
 }
+
+#reservation-title{
+  padding-bottom: 5%;
+  padding-top: 4%;
+  font-size: 3rem;
+}
+
+#reservation{
+  display: flex;
+  padding: 6%;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.ul-activity{
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  background: none;
+  align-self: stretch;
+  padding-bottom: 5%;
+}
+
+.ul-activity li{
+  height: 50;
+}
+
+#activities-section{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#activities-section p:first-child{
+  font-size: 1.2rem;
+}
+
+.btn-act{
+  align-self: center;
+  justify-self: right;
+}
+
+.act-list{
+  padding-top: 2%;
+  width: 30%;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.act-list img{
+  padding-bottom: 5%;
+}
+
+#warning-act{
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  margin-bottom: 5%;
+}
