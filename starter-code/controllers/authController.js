@@ -16,8 +16,8 @@ exports.signup = async (req, res) => {
     res.redirect("/")
 }
 
-exports.loginView = (req, res) => {
-    res.render("auth/auth", { msg: req.flash("error") });
+exports.loginView = async (req, res) => {
+   res.render("auth/auth", { msg: req.flash("error") });
 }
 
 exports.logout = (req, res) => {

@@ -3,7 +3,8 @@ const Activity = require('../models/Activity')
 
 exports.profileView = async (req, res) => {
     let activities = await Activity.find({user_id: req.user._id})
-    res.render('profile', {activities})
+    let user = await User.findById(req.user._id)
+    res.render('profile', {activities, user})
 }
 
 exports.campingView = (req, res) => {

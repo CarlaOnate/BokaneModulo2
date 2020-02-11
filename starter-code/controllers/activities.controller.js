@@ -32,5 +32,10 @@ exports.edit = async (req, res) => {
   let{typeAct, time, numberPeople} = req.body
   let act = await Activity.findByIdAndUpdate(req.params.id_act, {numPeople: numberPeople, typeAct, time })
   res.redirect('/profile')
-  // res.redirect(304, '/profile')
+}
+
+exports.deleteAct = async (req, res) => {
+  let {id_act} = req.params
+  await Activity.findByIdAndDelete(id_act)
+  res.redirect('/profile')
 }

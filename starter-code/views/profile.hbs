@@ -1,7 +1,16 @@
-<section id="profile">
-<h2 id="profile-title">Profile</h2>
-<div data-spy="scroll" data-target="#card-scroll" data-offset="0" class="scrollspy-example" id="act-cards">
+<section id="profile-section">
+  <div id="profile">
+  <h2 id="profile-title"class="">Profile</h2>
+  <p>Profile Picture:</p>
+  <img src="{{user.image}}" class="w-50 rounded-lg mb-3" alt="There is no profile picture">
+  <p class="font-weight-bold">Name: <p>{{user.name}}</p></p>
+  <p class="font-weight-bold">Email: <p>{{user.email}}</p></p>
+  <a href="/profile-picture" class="btn-primary btn btn-sm mb-3">Edit Profile</a>
+  <a href="/auth/logout" class="btn-danger btn btn-sm">Logout</a>
+  </div>
+<div data-spy="scroll" data-target="#card-scroll" data-offset="0" class="scrollspy-example mb-3" id="act-cards">
   {{!-- NO JALA ESTO DEL SCROLL PERO NO SE VE MAL ASI --}}
+  <h4 class="pb-2">Next activities</h4>
   <div id="card-scroll">
   {{#each activities}}
  <div class="card m-1 act-card" style="width: 18rem;">
@@ -13,10 +22,10 @@
       <p class="card-text">This activity was scheduled and the amount of people that will go are {{this.numPeople}}</p>
   {{/if}}
       <div id="buttons-card">
-        <form action="/activities/{{this._id}}" method="PUT">
+        <form action="/activities/{{this._id}}" method="GET">
           <input type="submit" class="btn btn-verde m-2" value="Edit">
         </form>
-        <form action="/activities/{{this._id}}" method="DELETE">
+        <form action="/activities/delete/{{this._id}}" method="GET">
           <input type="submit" class="btn text-white btn-danger m-2" value="Delete">
         </form>
       </div>

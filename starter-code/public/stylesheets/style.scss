@@ -247,9 +247,29 @@ a {
   flex-flow: row wrap;
 }
 
-// #profile-title{
-  
-// }
+#profile-title{
+  font-size: 3rem;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+#profile-section{
+  display: flex;
+  flex-direction: row;
+}
+
+#profile{
+  justify-self: flex-start;
+  justify-content: center;
+  padding-left: 3%;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 90vh;
+}
 
 #edit-act-form{
   display: flex;
@@ -266,4 +286,11 @@ a {
 
 #edit-act-form h3{
   font-size: 2rem;
+}
+
+#edit-profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }

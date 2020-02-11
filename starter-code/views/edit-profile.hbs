@@ -1,0 +1,21 @@
+<section id="edit-profile">
+  <h4>Edit Profile</h4>
+<img src="{{image}}" class="w-25 rounded-lg" alt="There is no profile picture">
+<form action="/profile-picture" method="POST" enctype="multipart/form-data">
+  <label class="pt-3">Select Image</label>
+  <input class="btn btn-sm form-control" type="file" name="profilePic" accept="image/*">
+  <p>Allowed formats are: jpg, png</p>
+  {{!-- <input class="btn-verde btn-sm form-control w-50" type="submit" value="Update picture"><br> --}}
+  <label>Name:</label>
+  <input name="name" class="form-control" value="{{name}}"><br>
+  <label>Email</label>
+  <input name="email" class="form-control" value="{{email}}"><br>
+  <input type="submit" class="btn btn-verde btn-md mb-5" value="Update"><br>
+</form>
+<div class="text-danger text-center">
+ <h6>Danger Zone!</h6>
+ <p>If you delete your profile all your information will be deleted from this site.<br> Tread carefully....</p>
+  <a href="/profile/del/{{_id}}" class="btn-danger btn btn-sm mb-5">Detele Profile</a>
+</div>
+</section>
+
