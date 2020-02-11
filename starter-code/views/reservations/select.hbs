@@ -1,0 +1,130 @@
+<div id="reser-header">
+<button  id="btn-sup-select">1. Select</button>
+<button style="border-color: #ABBF63; color:#ABBF63;" id="btn-sup-check">2. Check</button>
+<button style="border-color: #ABBF63; color:#ABBF63;" id="btn-sup-book">3. Book</button>
+</div>
+
+<h2>{{mess}}</h2>
+<form id="form-select-room" action="/reservation" method="POST">
+
+<div id="reser-form">
+
+<div class="input-group mb-3" style="width: 16rem;">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">FROM</span>
+  </div>
+  <input required id="start-date" name="startDate" type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<div class="input-group mb-3" style="width: 16rem;">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">TO</span>
+  </div>
+  <input required id="end-date" name="endDate" type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<div class="input-group mb-3" style="width: 10rem;">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">ADULTS</span>
+  </div>
+  <input required min="0" name="numAdults" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<div class="input-group mb-3" style="width: 10rem;">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">CHILDREN</span>
+  </div>
+  <input required min="0" name="numChildren" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+</div>
+
+<div class="form-select-room-gallery">
+<div class="card h-100" id="img-rooms"style="width: 35rem;">
+  <img src="/images/room1.jpg" class="card-img-top" alt="room1">
+  <div class="card-body">
+    <h5 class="card-title">Carla Room</h5>
+    <p class="card-text">Cabins designed with traditional materials, with the purpose of create a space of harmony with nature. Guests will find a way of life maybe a little different. We try to find a way of life that is a good compromise between comfort and respect for the environment.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Breakfast table</li>
+    <li class="list-group-item">Ceiling fan</li>
+    <li class="list-group-item">2 doubled beds</li>
+    <li class="list-group-item">Essentials</li>
+    <li class="list-group-item">WIFI</li>
+  </ul>
+  <div class="card-body">
+  <div class="custom-control custom-checkbox">
+  <input name="checkRoom1"  type="checkbox" class="custom-control-input" id="check-room1">
+  <label class="custom-control-label" for="check-room1">Select</label>
+</div>
+  </div>
+</div>
+
+<div class="card h-100" id="img-rooms"style="width: 35rem;">
+  <img src="/images/room2.jpg" class="card-img-top" alt="room2">
+  <div class="card-body">
+    <h5 class="card-title">Dova Room</h5>
+    <p class="card-text">Beautiful cabin for couple, private built with traditional materials, the perfect space to relax and be in contact with nature. We try to find a way of life that is a good compromise between comfort and respect for the environment.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Breakfast table</li>
+    <li class="list-group-item">Ceiling fan</li>
+    <li class="list-group-item">1 queen size bed</li>
+    <li class="list-group-item">Essentials</li>
+    <li class="list-group-item">WIFI</li>
+  </ul>
+  <div class="card-body" >
+  <div class="custom-control custom-checkbox">
+  <input name="checkRoom2"  type="checkbox" class="custom-control-input" id="check-room2">
+  <label class="custom-control-label" for="check-room2">Select</label>
+</div>
+  </div>
+</div>
+
+
+<div class="card h-100 animated fadeInUp clearfix ae-animation-fadeInUp" id="img-rooms"style="width: 35rem;">
+  
+  <figure>
+  <img src="/images/room3.jpg" class="card-img-top animate" alt="room3">
+ </figure>
+  <div class="card-body">
+    <h5 class="card-title">Avenu Place</h5>
+    <p class="card-text">Beautiful area for camping, if you love ants and mosquitos :3 the perfect space to relax and be in contact with nature. We try to find a way of life that is a good compromise between comfort and respect for the environment.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Essentials</li>
+    <li class="list-group-item">WIFI</li>
+  </ul>
+  <div class="card-body">
+
+<div class="custom-control custom-checkbox">
+  <input name="checkRoom3"  type="checkbox" class="custom-control-input" id="check-room3">
+  <label id="check-room3" class="custom-control-label" for="check-room3">Select</label>
+</div>
+
+  </div >
+  
+
+</div>
+</div>
+
+
+<div id="div-btn-continue">
+<input value="CONTINUE"id="btn-contiune" type="submit" class="btn btn-outline-secondary">
+
+</div>
+
+</form>
+
+<section id="select-footer">
+  <p>© 2020 BOKANE ECOTURISM & RESORTS. ALL RIGHTS RESERVED - <a href="">TERMS & CONDITIONS</a></p>
+
+</section>
+
+
+
+
+<script>
+  document.getElementById('start-date').valueAsDate = new Date();
+  document.getElementById('end-date').valueAsDate = new Date();
+</script>

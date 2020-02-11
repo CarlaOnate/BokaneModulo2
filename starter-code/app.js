@@ -64,6 +64,7 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')))
 const index = require('./routes/index')
 app.use('/', index)
 app.use('/auth', require('./routes/auth'))
+app.use('/reservation', require('./routes/reservation'))
 
 
 module.exports = app;
