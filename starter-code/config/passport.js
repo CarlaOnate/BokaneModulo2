@@ -4,16 +4,6 @@ const googleStrategy = require("passport-google-oauth20").Strategy
 
 passport.use(User.createStrategy())
 
-passport.serializeUser(function(user, done) {
-    done(null, user.id)
-})
-
-passport.deserializeUser(function(id, done) {
-    User.findById(id, function(err, user) {
-        done(err, user);
-    })
-})
-
 passport.use(new googleStrategy({
     clientID: process.env.GOOGLE_ID,
     clientSecret: process.env.GOOGLE_SECRET,
@@ -22,7 +12,6 @@ passport.use(new googleStrategy({
  async (_, __, profile, done) => {
     const user = User.findOne({googleID: profile.id})
     if (user) {
-        await user.save() //AQUI ERROR, NO EXISTE SAVE()
         return done(null, user)
     }
     const newUser = await User.create({
@@ -33,5 +22,16 @@ passport.use(new googleStrategy({
     done(null, newUser)
     }
 ))
+
+passport.serializeUser(function(user, done) {
+    done(null, user.id)
+})
+
+passport.deserializeUser(function(id, done) {
+    User.findById(id, function(err, user) {
+        done(err, user);
+    })
+})
+
 
 module.exports = passport
