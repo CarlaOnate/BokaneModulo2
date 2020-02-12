@@ -16,7 +16,7 @@ exports.editProfile = async (req, res) => {
 
 exports.editProfileView = async (req, res) => {
   let user = await User.findById(req.user._id)
-  res.render('edit-profile', user)
+  res.render('edit-profile', {user,  show:false, profile:true})
 }
 
 exports.deleteProfile = async (req, res) => {

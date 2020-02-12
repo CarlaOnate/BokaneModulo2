@@ -5,7 +5,8 @@ const Reservation = require('../models/Reservation')
 //---------------------------------------------------------------------------------------------------
 
 exports.reserView=(req,res,next)=>{
-res.render('reservations/select')
+  if(req.isAuthenticated()) return res.render('reservations/select', {show:false, profile:true})
+res.render('reservations/select', {show:false, profile:false})
 }
 
 //--------------------------------------------------------------------------------------------------------
@@ -24,7 +25,7 @@ exports.reserPost=(req,res,next)=>{
   const minSD=new Date(startDate).getTime();
   const minED=new Date(endDate).getTime();
   let days=minED-minSD;
-  days/=(1000 * 3600 * 24); 
+  days/=(1000 * 3600 * 24);
   //Obtenemos valores de adultos y niños
   const adults=Number(numAdults)
   const children=Number(numChildren)
@@ -84,7 +85,8 @@ exports.reserCheckView=(req,res,next)=>{
     startDate:sd,
     endDate:ed
   }
-res.render('reservations/check',obj)
+ if(req.isAuthenticated()) return res.render('reservations/check',{obj, show:false, profile:true})
+res.render('reservations/check',{obj, show:false, profile:false})
 }
 
 //---------------------------------------------------------------------------------------------------
@@ -109,9 +111,9 @@ exports.reserBookView=(req,res,next)=>{
     perTotal:nor/999
   }
   if(req.isAuthenticated()){
-  res.render('reservations/bookAuth',obj)
+  res.render('reservations/bookAuth',{obj, show:false, profile:true})
   }else{
-res.render('reservations/book',obj)
+res.render('reservations/book',{obj, show:false, profile:false})
   }
 }
 
@@ -187,7 +189,7 @@ case '2':
   nameRoom='Dova Room'
   break;
 case '3':
-  nameRoom='Paku Place'
+  nameRoom='Avenu Place'
   break;
 }
   const newRes={
@@ -219,7 +221,11 @@ exports.reserCompView=(req,res,next)=>{
     digitalPayCheck,
     id
   }
-  res.render('reservations/complete',obj)
+  if(req.isAuthenticated()){
+    res.render('reservations/complete',{obj, show:false, profile:true})
+    }else{
+  res.render('reservations/complete',{obj, show:false, profile:false})
+    }
 }
 
 //---------------------------------------------------------------------------------------------------
@@ -240,7 +246,11 @@ exports.reserCompPost=async(req,res,next)=>{
 exports.editBookView=async(req,res,next)=>{
   const book=await Reservation.findById(req.params.id)
   console.log(book)
-  res.render('reservations/editBook',book)
+  if(req.isAuthenticated()){
+    res.render('reservations/editBook',{book, show:false, profile:true})
+    }else{
+  res.render('reservations/editBook',{book, show:false, profile:false})
+    }
 }
 
 //---------------------------------------------------------------------------------------------------

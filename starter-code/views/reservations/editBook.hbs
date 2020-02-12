@@ -6,7 +6,7 @@
 <section id="edit-book-form">
 <h3 class="p-2">Edit Reservation</h3>
 <div class="w-25 text-center">
-  <form action="/reservation/edit/{{_id}}" method="POST">
+  <form action="/reservation/edit/{{book._id}}" method="POST">
 
 <div class="input-group mb-3" style="width: 16rem;">
   <div class="input-group-prepend">
@@ -26,14 +26,14 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">ADULTS</span>
   </div>
-  <input required value={{numAdult}} min="0" name="numA" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  <input required value={{book.numAdult}} min="0" name="numA" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 </div>
 
 <div class="input-group mb-3" style="width: 10rem;">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">CHILDREN</span>
   </div>
-  <input required value="{{numChild}}" min="0" name="numC" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  <input required value="{{book.numChild}}" min="0" name="numC" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 </div>
 </div>
 
@@ -64,8 +64,8 @@
 </div>
 </section>
 
-<input id="sDate" type="hidden" name="startDate" value={{startDate}}>
-<input id="eDate" type="hidden" name="endDate" value={{endDate}}>
+<input id="sDate" type="hidden" name="startDate" value={{book.startDate}}>
+<input id="eDate" type="hidden" name="endDate" value={{book.endDate}}>
 
 
 <script>

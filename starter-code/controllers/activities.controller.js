@@ -24,7 +24,7 @@ exports.activity = async (req, res) => {
 
 exports.editView = async (req, res) => {
   let act = await Activity.findById(req.params.id_act)
-  res.render('editAct', act)
+  res.render('editAct',  {act, show:false, profile:true })
 }
 
 

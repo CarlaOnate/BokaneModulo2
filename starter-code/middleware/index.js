@@ -6,3 +6,4 @@ exports.isAuthenticated = (req, res, next) => {
     }
     res.redirect('/')
 }
+

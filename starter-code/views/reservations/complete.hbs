@@ -13,11 +13,11 @@
 
 
 
-<form id="form-select-room" action="/reservation/book-complete/{{id}}" method="POST">
+<form id="form-select-room" action="/reservation/book-complete/{{obj.id}}" method="POST">
 <div class="card h-100" style="width:500px">
 <div style="height: 300px; width:100%; display:flex; align-items:center; justify-content:center; flex-direction:column ">
 
-{{#if digitalPayCheck}}
+{{#if obj.digitalPayCheck}}
 <h2 style="color:#5C7345; font-size:1.5rem;" >Transaction completed</h2>
 <h2 style="color:#5C7345; font-size:1.5rem;">via Paypal!</h2>
 <h2 style="color:#5C7345; font-size:1.5rem;">Now you can login,</h2>
@@ -34,7 +34,7 @@
 </div>
 </div>
 
-<input id="digitalPayCheck" type="hidden" name="digitalPayCheck" value="{{digitalPayCheck}}">
+<input id="digitalPayCheck" type="hidden" name="digitalPayCheck" value="{{obj.digitalPayCheck}}">
 
 <div id="div-btn-continue">
 <input value="CONTINUE"id="btn-contiune" type="submit" class="btn btn-outline-secondary">

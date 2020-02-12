@@ -11,49 +11,35 @@
   <link href='https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
-  <!-- NAV BAR EN LAYOUT -->
 
 <nav class="site-header sticky-top py-1">
   <div class="container d-flex flex-column flex-md-row justify-content-between">
     <a class="py" href="/" style="padding:40" aria-label="Product">
-       <img id="logo-image" src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581191814/tent_ifvsz2.png" width="35" height="35" margin=0 class="d-inline-block align-top ml-4 my-0" alt="CompanyLogo">
-      
+      <img id="logo-image" src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581191814/tent_ifvsz2.png" width="35" height="35" margin=0 class="d-inline-block align-top ml-4 my-0" alt="CompanyLogo">
     </a>
     <a class="py-2 d-none d-md-inline-block" href="/reservation">Booking</a>
+{{#if profile}}
+    <a class="py-2 d-none d-md-inline-block" href="/profile">Profile</a>
+{{else}}
     <a class="py-2 d-none d-md-inline-block" href="/auth/login">Login</a>
+{{/if}}
+{{#if profile}}
+    <a class="py-2 d-none d-md-inline-block" href="/auth/logout">Logout</a>
+{{else}}
     <a class="py-2 d-none d-md-inline-block" href="/auth/signup">Sign up</a>
+{{/if}}
     <a class="py-2 d-none d-md-inline-block" href="/activities">Activities</a>
-    <a class="py-2 d-none d-md-inline-block" href="/aboutus">About us</a>
+    <a class="py-2 d-none d-md-inline-block" href="/about-us">About us</a>
   </div>
 </nav>
 
-<!--
 
 <circle cx="12" cy="12" r="10">
       </circle>
       <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94">
       </path>
 
-  <div>
-    <nav id="navbar-color" class="navbar navbar-expand-lg navbar-light">
-      <div id="navbarNav" class="d-flex justify-content-between w-100">
-        <a class="navbar-brand" href="/">
-          <img id="logo-image" src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581191814/tent_ifvsz2.png" width="45" height="45" class="d-inline-block align-top ml-4 my-0" alt="CompanyLogo">
-        </a>
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            {{#if profile}}
-            <a class="nav-link pt-3 pb-0 px-2 badge" href="/profile" style="font-size: 1.4rem;">Profile</a>
-            {{else}}
-            <a class="nav-link pt-3 pb-0 px-2 badge" href="/auth/login" style="font-size: 1.4rem;">Login</a>
-            {{/if}}
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-  -->
-  <!-- FIN NAV BAR EN LAYOUT -->
+
 
   {{{body}}}
 <script src="/javascripts/script.js"></script>

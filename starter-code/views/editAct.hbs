@@ -1,7 +1,7 @@
 <section id="edit-act-form">
 <h3 class="p-2">Edit Activity</h3>
 <div class="w-25 text-center">
-  <form action="/activities/{{_id}}" method="POST">
+  <form action="/activities/{{act._id}}" method="POST">
      <label>What type of activity?</label>
    <select name="typeAct" class="form-control">
      <option>kayak</option>
@@ -17,7 +17,7 @@
    </select>
    <div class="form-group">
      <label>Number of people:</label>
-     <input required name="numberPeople" type="text" class="form-control" id="" value="{{numPeople}}">
+     <input required name="numberPeople" type="text" class="form-control" id="" value="{{act.numPeople}}">
    </div>
    <input type="submit" class="btn btn-verde btn-act" value="Edit">
   </form>

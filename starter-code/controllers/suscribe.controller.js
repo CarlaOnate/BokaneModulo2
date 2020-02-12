@@ -1,4 +1,5 @@
 
 exports.suscribeView = (req, res) => {
-  res.render('index', {msg: 'El correo fue registrado exitosamente', show:true})
+  if (req.isAuthenticated()) return res.render('index', {msg: 'El correo fue registrado exitosamente',   show:true, profile:true})
+  res.render('index', {msg: 'El correo fue registrado exitosamente', show:true, profile:false})
 }
