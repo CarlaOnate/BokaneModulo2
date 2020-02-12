@@ -1,5 +1,6 @@
 <section id="edit-profile">
-  <h4>Edit Profile</h4>
+<div class="w-25">
+  <h4 class="pt-3 pb-3">Edit Profile</h4>
 <img src="{{user.image}}" class="w-25 rounded-lg" alt="There is no profile picture">
 <form action="/profile-picture" method="POST" enctype="multipart/form-data">
   <label class="pt-3">Select Image</label>
@@ -16,5 +17,6 @@
  <h6>Danger Zone!</h6>
  <p>If you delete your profile all your information will be deleted from this site.<br> Tread carefully....</p>
   <a href="/profile/del/{{user._id}}" class="btn-danger btn btn-sm mb-5">Detele Profile</a>
+</div>
 </div>
 </section>

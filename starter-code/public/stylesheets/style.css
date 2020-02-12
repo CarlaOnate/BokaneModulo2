@@ -250,6 +250,7 @@ a {
 #edit-profile {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly; }
 
 .form-select-room-gallery {

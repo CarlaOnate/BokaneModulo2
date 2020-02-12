@@ -16,6 +16,7 @@
   {{#each activities}}
  <div class="card m-1 act-card" style="width: 18rem;">
     <div class="card-body">
+      <h3 class="card-title">{{this.user_id.name}}</h3>
       <h5 class="card-title">{{this.typeAct}}</h5>
   {{#if this.time}}
       <p class="card-text">This activity was scheduled at {{this.time}} and the amount of people that will go are {{this.numPeople}}</p>
@@ -43,7 +44,7 @@
   {{#each reservations}}
  <div class="card m-1 act-card" style="width: 18rem;">
     <div class="card-body">
-
+      <h3 class="card-title">{{this.user_id.name}}</h3>
       <p>From:{{this.startDate}}</p>
       <p>To:{{this.endDate}}</p>
       <p>{{this.numAdult}} adults and {{this.numChild}} children</p>
@@ -67,9 +68,5 @@
   {{/each}}
   </div>
 </div>
-
-
-
-
 </section>
 

@@ -3,7 +3,10 @@ const {model, Schema} = require('mongoose')
 const activitySchema = new Schema({
 
   name: String,
-  user_id: Schema.Types.ObjectId,
+  user_id: {
+    type: Schema.Types.ObjectId,
+    ref: "User"
+  },
   numPeople: {
     type: Number,
     default: 1,
