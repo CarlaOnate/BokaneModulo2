@@ -192,10 +192,13 @@ case '3':
   nameRoom='Avenu Place'
   break;
 }
+//Define Fecha con hora de Entrada y Salida
+const startDateS=Number(startDate)+(3600000*19);
+const endDateS=Number(endDate)+(3600000*19);
   const newRes={
     user_id: user._id,
-    startDate:new Date(Number(startDate)).toLocaleString(),
-    endDate:new Date(Number(endDate)).toLocaleString(),
+    startDate:new Date(startDateS).toLocaleString(),
+    endDate:new Date(endDateS).toLocaleString(),
     numDays:days,
     totalPrice:perTotal,
     numAdult:adults,
@@ -204,7 +207,6 @@ case '3':
   }
   //Creamos una nueva reservacion ligada al usuario
   const reser=await Reservation.create(newRes);
-  console.log(reser)
   const id=reser._id
   await user.reservations.push(id)
   await user.save()
@@ -245,7 +247,6 @@ exports.reserCompPost=async(req,res,next)=>{
 
 exports.editBookView=async(req,res,next)=>{
   const book=await Reservation.findById(req.params.id)
-  console.log(book)
   if(req.isAuthenticated()){
     res.render('reservations/editBook',{book, show:false, profile:true})
     }else{
