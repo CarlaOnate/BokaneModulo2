@@ -379,19 +379,6 @@ border-color:#bac79e
 }
 
 
-#select-footer{
-  font-size: 0.75rem;
-  color: gray;
-  height: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  box-shadow: 2px 2px 30px 2px rgba(0,0,0,0.5);
-  -moz-box-shadow: 2px 2px 30px 2px rgba(0,0,0,0.5);
-  box-shadow: 2px 2px 30px 2px rgba(0,0,0,0.5);
-
-}
 
 
 
@@ -507,3 +494,125 @@ nav {
   margin-top: 0;
   border-radius: 20px;
 }
+
+
+/*footer index*/
+#footer {
+  background: #242424;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 30px 2px rgba(0,0,0,0.5);
+  -moz-box-shadow: 2px 2px 30px 2px rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 30px 2px rgba(0,0,0,0.5);
+
+}
+#footer-terms{
+  font-size: 0.75rem;
+  color: gray;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.foot-container {
+  width: 75%;
+  height: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.social-network{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-left: 0 !important;
+}
+.social-network li{
+  margin: 0 8px 0 8px;
+  display: inline;
+  
+}
+
+.social-circle li a {
+  background: #417630;
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.social-network a.icoYoutube:hover {
+  background-color: #ed4526;
+
+}
+
+.social-network a.icoFacebook:hover {
+  background-color: #3B5998;
+
+}
+
+.social-network a.icoTwitter:hover {
+  background-color: #33ccff;
+
+}
+
+.social-network a.icoGoogle:hover {
+  background-color: #BD3518;
+
+}
+
+.social-network a.icoVimeo:hover {
+  background-color: #0590B8;
+
+}
+
+.social-network a.icoInstagram:hover {
+  background-color: #bd4c8d;
+
+}
+
+
+.social-circle li i {
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.social-circle i {
+  color: #fff;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+
