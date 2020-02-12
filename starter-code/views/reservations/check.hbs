@@ -9,36 +9,36 @@
 <div style="margin: 25px 0 45px 0;">
   <i style="margin-right: 10px; color:gray" class="fas fa-map-marker-alt"></i><span style="color: gray;">Bokané (Boca del Cielo, Chiapas)</span> 
   <br>
-  <i style="margin-right: 10px; color:gray" class="far fa-calendar-alt"></i><span style="color: gray;">{{days}} nights</span>
+  <i style="margin-right: 10px; color:gray" class="far fa-calendar-alt"></i><span style="color: gray;">{{obj.days}} nights</span>
 </div>
 
 <div id="content-checkView">
-<img src="/images/room{{room}}.jpg" style="width:40%; border-radius: 15px;"alt="room">
+<img src="/images/room{{obj.room}}.jpg" style="width:40%; border-radius: 15px;"alt="room">
 <div style="display:flex; flex-direction:column; justify-content:flex-start; margin-right:80px;">
   <h3 style="margin:0;"id="nameRoom"></h3>
-  <p>{{adults}} adults & {{children}} children</p>
+  <p>{{obj.adults}} adults & {{obj.children}} children</p>
 </div>
 <div style="margin-left:60px;">
-<h4 style="color: black;">${{perNigth}}.00 MXN <span style="font-size: 0.9rem;">Per Nigth</span></h4> 
+<h4 style="color: black;">${{obj.perNigth}}.00 MXN <span style="font-size: 0.9rem;">Per Nigth</span></h4> 
 
-<h4 style="color: black; line-height:300%;" name="perTotal"><b>${{perTotal}}.00 MXN </b><span style="font-size: 0.9rem;"> Total Price</span></h4><span style="font-size: 0.9rem;">
+<h4 style="color: black; line-height:300%;" name="perTotal"><b>${{obj.perTotal}}.00 MXN </b><span style="font-size: 0.9rem;"> Total Price</span></h4><span style="font-size: 0.9rem;">
 </div>
 </div>
 
 
 
 <form id="form-select-room" action="/reservation/check" method="POST">
-<input type="hidden" name="perTotal" value={{perTotal}}>
+<input type="hidden" name="perTotal" value={{obj.perTotal}}>
 <div id="div-btn-continue">
   <p style="color:gray; margin-top:45px;">verify your information and press CONTINUE</p>
 <input value="CONTINUE"id="btn-contiune" type="submit" class="btn btn-outline-secondary">
 </div>
 
 
-<input type="hidden" name="days" value="{{days}}">
-<input type="hidden" name="adults" value={{adults}}>
-<input type="hidden" name="children" value={{children}}>
-<input type="hidden" name="room" value={{room}}>
+<input type="hidden" name="days" value="{{obj.days}}">
+<input type="hidden" name="adults" value={{obj.adults}}>
+<input type="hidden" name="children" value={{obj.children}}>
+<input type="hidden" name="room" value={{obj.room}}>
 
 </form>
 
@@ -50,7 +50,7 @@
 </section>
 
 
-<input type="hidden" id="checkRoom" value={{room}}>
+<input type="hidden" id="checkRoom" value={{obj.room}}>
 
 
 

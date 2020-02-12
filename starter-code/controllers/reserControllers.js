@@ -1,5 +1,6 @@
 exports.reserView=(req,res,next)=>{
-res.render('reservations/select')
+  if(req.isAuthenticated()) return res.render('reservations/select', {show:false, profile:true})
+res.render('reservations/select', {show:false, profile:false})
 }
 
 exports.reserPost=(req,res,next)=>{
@@ -56,15 +57,14 @@ exports.reserCheckView=(req,res,next)=>{
     children:c,
     room:op
   }
-res.render('reservations/check',obj)
+ if(req.isAuthenticated()) return res.render('reservations/check',{obj, show:false, profile:true})
+res.render('reservations/check',{obj, show:false, profile:false})
 }
 
 exports.reserCheckPost=(req,res,next)=>{
-  console.log("holaaaaaaaaaaaaa")
   const {days,adults,children,room,perTotal}=req.body
-  console.log(req.body)
   const numHide=999*Number(perTotal)
-  
+
   res.redirect(`/reservation/book?days=${days}&a=${adults}&c=${children}&op=${room}&nor=${numHide}`)
 }
 
@@ -77,7 +77,8 @@ exports.reserBookView=(req,res,next)=>{
   const obj={
    perTotal:nor/999
   }
-res.render('reservations/book',obj)
+  if(req.isAuthenticated()) return res.render('reservations/book', {obj, show:false, profile:true})
+res.render('reservations/book',{obj, show:false, profile:false})
 }
 
 exports.reserBookPost=(req,res,next)=>{
