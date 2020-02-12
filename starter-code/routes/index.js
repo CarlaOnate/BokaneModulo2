@@ -1,6 +1,6 @@
 const express = require('express');
 const router  = express.Router();
-const {profileView, campingView, actView, aboutUsView} = require('../controllers')
+const {profileView, campingView, actView, aboutUsView, termsView} = require('../controllers')
 const {isAuthenticated} = require('../middleware')
 //const {reserView,reserPOST} = require('../controllers/reserControllers.js')
 
@@ -11,13 +11,15 @@ router.get('/', (req, res, next) => {
   { show:false,
     profile:false
   })
-});
+})
 
 router.get('/profile', isAuthenticated, profileView)
 
 router.get('/activities', actView)
 
 router.get('/about-us', aboutUsView)
+
+router.get('/terms', termsView)
 
 //router.get('/reservation', reserView)
 

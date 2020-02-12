@@ -57,7 +57,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')))
 
 
-
+// app.locals.settings['allAct']
+// app.locals.settings['allRes']
 
 
 const index = require('./routes/index')

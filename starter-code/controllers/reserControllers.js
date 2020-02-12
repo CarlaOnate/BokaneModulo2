@@ -204,7 +204,6 @@ case '3':
   }
   //Creamos una nueva reservacion ligada al usuario
   const reser=await Reservation.create(newRes);
-  console.log(reser)
   const id=reser._id
   await user.reservations.push(id)
   await user.save()
@@ -245,7 +244,6 @@ exports.reserCompPost=async(req,res,next)=>{
 
 exports.editBookView=async(req,res,next)=>{
   const book=await Reservation.findById(req.params.id)
-  console.log(book)
   if(req.isAuthenticated()){
     res.render('reservations/editBook',{book, show:false, profile:true})
     }else{
