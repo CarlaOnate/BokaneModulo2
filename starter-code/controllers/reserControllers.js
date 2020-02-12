@@ -12,7 +12,7 @@ exports.reserPost=(req,res,next)=>{
   const minSD=new Date(startDate).getTime();
   const minED=new Date(endDate).getTime();
   let days=minED-minSD;
-  days/=(1000 * 3600 * 24); 
+  days/=(1000 * 3600 * 24);
   //Obtenemos valores de adultos y niños
   const adults=Number(numAdults)
   const children=Number(numChildren)
