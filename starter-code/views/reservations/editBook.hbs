@@ -1,0 +1,77 @@
+
+<section style="display: flex; justify-content:center; margin-top:50px;">
+<h4 id="msgError" style="color:rgb(255, 50, 50)" >{{msg}}</h4>
+</section>
+
+<section id="edit-book-form">
+<h3 class="p-2">Edit Reservation</h3>
+<div class="w-25 text-center">
+  <form action="/reservation/edit/{{_id}}" method="POST">
+
+<div class="input-group mb-3" style="width: 16rem;">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">FROM</span>
+  </div>
+  <input required id="start-date" name="startDate" type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<div class="input-group mb-3" style="width: 16rem;">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">TO</span>
+  </div>
+  <input required id="end-date" name="endDate" type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<div class="input-group mb-3" style="width: 10rem;">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">ADULTS</span>
+  </div>
+  <input required value={{numAdult}} min="0" name="numA" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<div class="input-group mb-3" style="width: 10rem;">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">CHILDREN</span>
+  </div>
+  <input required value="{{numChild}}" min="0" name="numC" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+</div>
+
+
+<div class="input-group mb-3" style="width: 16rem;">
+  <div class="input-group-prepend"></div>
+     <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Room</span>
+  </div>
+   <select name="room" class="form-control">
+     <option>Carla Room</option>
+     <option>Dova Room</option>
+     <option>Avenu Place</option>
+   </select>
+   </div>
+</div>
+
+
+
+
+   <input type="submit" class="btn btn-verde btn-act" value="Edit">
+
+   
+  </form>
+  <form action="/profile" method="GET">
+          <input type="submit" class="btn text-white btn-danger m-2" value="Cancel">
+        </form>
+</div>
+</section>
+
+<input id="sDate" type="hidden" name="startDate" value={{startDate}}>
+<input id="eDate" type="hidden" name="endDate" value={{endDate}}>
+
+
+<script>
+  const SD=document.getElementById('sDate').value;
+  const ED=document.getElementById('eDate').value;
+
+  document.getElementById('start-date').valueAsDate = new Date(SD);
+  document.getElementById('end-date').valueAsDate = new Date(ED);
+</script>

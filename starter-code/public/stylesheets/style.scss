@@ -489,7 +489,7 @@ nav {
   align-items: flex-start;
 }
 
-#section-bookView{
+.section-bookView{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -498,3 +498,12 @@ nav {
 
 /*BOOK VIEW*/
 
+/*COMPLETE VIEW*/
+#section-completeView{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  border-radius: 20px;
+}

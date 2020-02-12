@@ -9,7 +9,7 @@
   <a href="/auth/logout" class="btn-danger btn btn-sm">Logout</a>
   </div>
 <div data-spy="scroll" data-target="#card-scroll" data-offset="0" class="scrollspy-example mb-3" id="act-cards">
-  {{!-- NO JALA ESTO DEL SCROLL PERO NO SE VE MAL ASI --}}
+  {{!-- NO JALA ESTO DEL SCROLL PERO NO SE VE MAL ASI XD --}}
   <h4 class="pb-2">Next activities</h4>
   <div id="card-scroll">
   {{#each activities}}
@@ -34,6 +34,41 @@
   {{/each}}
   </div>
 </div>
+
+<div data-spy="scroll" data-target="#card-scroll" data-offset="0" class="scrollspy-example mb-3" id="act-cards">
+  {{!-- NO JALA ESTO DEL SCROLL PERO NO SE VE MAL ASI XD --}}
+  <h4 class="pb-2">Next reservations</h4>
+  <div id="card-scroll">
+  {{#each reservations}}
+ <div class="card m-1 act-card" style="width: 18rem;">
+    <div class="card-body">
+
+      <p>From:{{this.startDate}}</p>
+      <p>To:{{this.endDate}}</p>
+      <p>{{this.numAdult}} adults and {{this.numChild}} children</p>
+      <p>{{this.room}}</p>
+      {{#if this.digitalPayment}}
+      <p>Payed</p>
+      {{/if}}
+
+      <div id="buttons-card">
+        {{#unless this.digitalPayment}}
+        <form action="/reservation/edit/{{this._id}}" method="GET">
+          <input type="submit" class="btn btn-verde m-2" value="Edit">
+        </form>
+        {{/unless}}
+        <form action="/reservation/delete/{{this._id}}" method="GET">
+          <input type="submit" class="btn text-white btn-danger m-2" value="Delete">
+        </form>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+  </div>
+</div>
+
+
+
 
 </section>
 

@@ -10,7 +10,11 @@ const reservationSchema = new Schema({
   numChild:Number,
   room:{
     type: String,
-    enum: ['Carla Room', 'Dova Room', 'Paku Place']
+    enum: ['Carla Room', 'Dova Room', 'Avenu Place']
+  },
+  digitalPayment: {
+      type: Boolean,
+      default:false
   }
 },{
 timestamps: true,

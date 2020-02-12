@@ -1,0 +1,53 @@
+
+
+<div id="reser-header">
+<button style="background-color:#ABBF63; border-color: #ABBF63; color:white;" id="btn-sup-select" ><i style="padding: 0 16px 0 16px;" class="fas fa-check"></i></button>
+<button style="background-color:#ABBF63; border-color: #ABBF63; color:white;" id="btn-sup-check" ><i style="padding: 0 16px 0 16px;" class="fas fa-check"></i></button>
+<button style="background-color:#ABBF63; border-color: #ABBF63; color:white;" id="btn-sup-book"><i style="padding: 0 16px 0 16px;" class="fas fa-check"></i></button>
+</div>
+
+
+
+<section id="section-completeView">
+
+
+
+
+<form id="form-select-room" action="/reservation/book-complete/{{id}}" method="POST">
+<div class="card h-100" style="width:500px">
+<div style="height: 300px; width:100%; display:flex; align-items:center; justify-content:center; flex-direction:column ">
+
+{{#if digitalPayCheck}}
+<h2 style="color:#5C7345; font-size:1.5rem;" >Transaction completed</h2>
+<h2 style="color:#5C7345; font-size:1.5rem;">via Paypal!</h2>
+<h2 style="color:#5C7345; font-size:1.5rem;">Now you can login,</h2>
+<h2 style="color:#5C7345; font-size:1.5rem;">check your profile</h2> 
+<h2 style="color:#5C7345; font-size:1.5rem;">and explore the activities</h2>
+{{else}}
+<h2 style="color:#5C7345; font-size:1.5rem;">Procces completed</h2>
+<h2 style="color:#5C7345; font-size:1.5rem;">Welcome to the experience</h2>
+<h2 style="color:#5C7345; font-size:1.5rem;">Now you can login,</h2>
+<h2 style="color:#5C7345; font-size:1.5rem;">check your profile</h2> 
+<h2 style="color:#5C7345; font-size:1.5rem;">and explore the activities</h2>
+
+{{/if}}
+</div>
+</div>
+
+<input id="digitalPayCheck" type="hidden" name="digitalPayCheck" value="{{digitalPayCheck}}">
+
+<div id="div-btn-continue">
+<input value="CONTINUE"id="btn-contiune" type="submit" class="btn btn-outline-secondary">
+</div>
+
+</form>
+
+
+</section>
+
+
+
+<section id="select-footer">
+  <p>© 2020 BOKANE ECOTURISM & RESORTS. ALL RIGHTS RESERVED - <a href="">TERMS & CONDITIONS</a></p>
+
+</section>
