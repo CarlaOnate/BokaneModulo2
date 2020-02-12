@@ -1,7 +1,10 @@
 const {model, Schema} = require('mongoose')
 
 const reservationSchema = new Schema({
-  user_id: Schema.Types.ObjectId,
+  user_id: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  },
   startDate:String,
   endDate:String,
   numDays:Number,
