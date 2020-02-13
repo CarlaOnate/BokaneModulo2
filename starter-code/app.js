@@ -14,7 +14,7 @@ const passport     = require('./config/passport')
 
 
 mongoose
-  .connect('mongodb://localhost/bokane', {useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.DB, {useNewUrlParser: true, useUnifiedTopology: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -57,8 +57,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')))
 
 
-// app.locals.settings['allAct']
-// app.locals.settings['allRes']
 
 
 const index = require('./routes/index')

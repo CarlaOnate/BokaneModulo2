@@ -381,7 +381,7 @@ border-color:#bac79e
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 #btn-contiune{
@@ -782,5 +782,86 @@ align-items: center;
 
 }
 
+#about-us{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 
+#about-us-title h2{
+  padding-top: 2%;
+  font-size: 3.5rem;
+  color: #2C5559;
+}
+
+#history{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#about-us-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#about-us-title img{
+  width: 100vw;
+}
+
+#history-title, #where-title, #gallery-title{
+  font-size: 2rem;
+  color: #2C5559;
+}
+
+#history-title{
+  padding-top: 4%;
+}
+
+#where-title{
+  padding-top: 5%;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+#gallery-title{
+  margin-bottom: 2%;
+  margin-top: 3%;
+  padding: 0;
+}
 //card profile activities
+
+//terms
+
+#terms{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.centered{
+  width: 70%;
+}
+
+#terms-main-title{
+  padding-top: 2%;
+  font-size: 3rem;
+  color:#225473;
+}
+
+.term-title{
+  font-size: 2rem;
+  color: #2C5559;
+}
+
+.bottom-term{
+  padding-bottom: 5%;
+}
+
+//terms

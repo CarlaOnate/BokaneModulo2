@@ -1,6 +1,6 @@
 const User = require('../models/User')
 const Reservation = require('../models/Reservation')
-
+const passport = require('../config/passport')
 
 //---------------------------------------------------------------------------------------------------
 
@@ -229,7 +229,15 @@ const endDateS=Number(endDate)+(3600000*19);
   const id=reser._id
   await user.reservations.push(id)
   await user.save()
-  res.redirect(`/reservation/book-complete/${id}`)
+
+  passport.authenticate("local", { //se llama a si misma porque es un middleware.
+    successRedirect: "/",
+    failureRedirect: "/auth/login",
+    failureFlash: true
+})(req, res, next)
+
+
+//  res.redirect(`/reservation/book-complete/${id}`)
   }
 }
 
