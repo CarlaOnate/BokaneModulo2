@@ -1,19 +1,26 @@
 const User = require('../models/User')
+const passport = require('../config/passport')
 
 exports.signupView = (req, res) => {
     res.render('auth/auth')
 }
 
-exports.signup = async (req, res) => {
+exports.signup = async (req, res, next) => {
     const { name, email, password } = req.body;
 
     const userOnDB = await User.findOne({ email })
 
     if (userOnDB !== null) {
-      res.render("auth/auth", { msg: "El correo ya fue registrado" })
+      return res.render("auth/auth", { msg: "The email is already registered, please log in" })
     }
-    await User.register({ name, email }, password)
-    res.redirect("/")
+    let user = await User.register({ name, email }, password)
+
+    passport.authenticate("local", { //se llama a si misma porque es un middleware.
+        successRedirect: "/",
+        failureRedirect: "/auth/login",
+        failureFlash: true
+    })(req, res, next)
+
 }
 
 exports.loginView = async (req, res) => {
