@@ -12,6 +12,10 @@ the model for the activities is able to create, edit, read and delete.
 Each user can have either 'Guest' or 'Admin' role, this because the admin is going to be able to see all the reservations made
 through the app and which user did the reservation.
 
+## Landing
+
+[Landing page](landing-page.gif)
+
 ## Wanna try it?
 You can create your new user, every user is created as 'Guest' so you will only be able to see your reservations.
 If you want to try the admin mode, here is the username and password.
