@@ -1,48 +1,118 @@
 
 <section id="profile-section">
-  <div id="profile">
-  <h2 id="profile-title"class="">Profile</h2>
-  <p>Profile Picture:</p>
+  <div id="profile" style="height: 100vh; background-color:rgb(223, 238, 224); padding:0 15px 0 15px;">
+  <h4 id="act-title" class="text-center pt-3 pb-2" style="color: hsl(185, 24%, 16%)"> <b>Profile</b> </h4>
   <img src="{{user.image}}" class="w-50 rounded-lg mb-3" alt="There is no profile picture">
   <p class="font-weight-bold">Name: <p>{{user.name}}</p></p>
   <p class="font-weight-bold">Email: <p>{{user.email}}</p></p>
+  
   <a href="/profile-picture" class="btn-primary btn btn-sm mb-3">Edit Profile</a>
   <a href="/auth/logout" class="btn-danger btn btn-sm">Logout</a>
   </div>
-<div data-spy="scroll" data-target="#card-scroll" data-offset="0" class="scrollspy-example mb-3" id="act-cards">
-  {{!-- NO JALA ESTO DEL SCROLL PERO NO SE VE MAL ASI XD --}}
-  <h4 class="pb-2">Next activities</h4>
-  <div id="card-scroll">
-  {{#each activities}}
- <div class="card m-1 act-card" style="width: 18rem;">
-    <div class="card-body">
-      <h3 class="card-title">{{this.user_id.name}}</h3>
-      <h5 class="card-title">{{this.typeAct}}</h5>
-  {{#if this.time}}
-      <p class="card-text">This activity was scheduled at {{this.time}} and the amount of people that will go are {{this.numPeople}}</p>
-  {{else}}
-      <p class="card-text">This activity was scheduled and the amount of people that will go are {{this.numPeople}}</p>
-  {{/if}}
-      <div id="buttons-card">
-        <form action="/activities/{{this._id}}" method="GET">
-          <input type="submit" class="btn btn-verde m-2" value="Edit">
-        </form>
-        <form action="/activities/delete/{{this._id}}" method="GET">
-          <input type="submit" class="btn text-white btn-danger m-2" value="Delete">
-        </form>
-      </div>
-    </div>
-  </div>
-  {{/each}}
-  </div>
-</div>
 
-<div data-spy="scroll" data-target="#card-scroll" data-offset="0" class="scrollspy-example mb-3" id="act-cards">
-  {{!-- NO JALA ESTO DEL SCROLL PERO NO SE VE MAL ASI XD --}}
-  <h4 class="pb-2">Next reservations</h4>
-  <div id="card-scroll">
-  {{#each reservations}}
- <div class="card m-1 act-card" style="width: 18rem;">
+
+<div data-spy="scroll" data-target="#card-scroll" data-offset="0" class="scrollspy-example mb-3" id="act-cards" style="display: flex; justify-content:center;">
+  <h5 id="act-title" class="text-center" style="font-size:2.5rem; color: #2C5559";>Activities</h5>
+ {{#each activities}}
+<div class="portfolio-item card" style="width: 280px; margin:0;">
+  <div class="card-body">
+                  <div class="wow rotateInUpLeft animated" data-animation-delay="5.8s" style="visibility: visible;">
+                    <img class="card-img-top" src="/images/act1.png" alt="welcome">
+                  </div>
+                  <div style="display: flex; align-items:flex-start;" class="portfolio-desc align-center card-img-overlay">
+                    <div class="folio-info">
+                      <br>
+                      <h5 style="text-align: center; font-size:1.8rem;" ><b>{{this.typeAct}}</b></h5>        
+                      <p style="text-align: justify;" class="card-text">This activity was scheduled at <b>{{this.time}}</b> and the amount of people that will go are <b>{{this.numPeople}}</b></p>
+                      <br><br>
+                      <div style="display:flex; justify-content:space-between;"> 
+                      <a style="color:blue;" href="/activities/{{this._id}}" class="fancybox"><i class="far fa-edit fa-2x"></i></a>
+                      <a style="color: red;" href="/activities/delete/{{this._id}}" class="fancybox"><i class="far fa-trash-alt fa-2x"></i></a>
+                      </div>                   
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <br><br>
+              {{/each}}
+             </div>
+
+<div data-spy="scroll" data-target="#card-scroll" data-offset="0" class="scrollspy-example mb-3" id="act-cards" style="display: flex; justify-content:center;">
+  <h5 id="act-title" class="text-center" style="font-size:2.5rem; color: #2C5559";> Reservations</h5>
+ {{#each reservations}}
+<div class="portfolio-item card" style="width: 300px; margin:0;">
+  <div class="card-body">
+                  <div class="wow rotateInUpLeft animated" data-animation-delay="5.8s" style="visibility: visible;">
+                    <img class="card-img-top" src="/images/res.png" alt="welcome">
+                  </div>
+                  <div style="display: flex; align-items:flex-start;" class="portfolio-desc align-center card-img-overlay">
+                    <div class="folio-info">   
+                      <p><b>From: </b>{{this.startDate}}</p>
+                      <p><b>To: </b>{{this.endDate}}</p>
+                      <p>{{this.numAdult}} adults and {{this.numChild}} children</p>
+                      <p><b>Room: </b>{{this.room}}</p>
+                        {{#if this.digitalPayment}}
+                         <p>Payed</p>
+                        {{/if}}
+                      
+                      <div style="display:flex; justify-content:space-between;"> 
+                        {{#unless this.digitalPayment}}
+                        <a style="color:blue;" href="/reservation/edit/{{this._id}}" class="fancybox"><i class="far fa-edit fa-2x"></i></a>
+                        {{/unless}}
+                      <a style="color: red;" href="/reservation/delete/{{this._id}}" class="fancybox"><i class="far fa-trash-alt fa-2x"></i></a>
+                      </div>                   
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <br><br>
+              {{/each}}
+             </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!--esto sí sirve: es respaldo de la original
+
+<div class="portfolio-item card" style="width: 20vw;">
+  <div class="card-body">
+                  <div class="wow rotateInUpLeft animated" data-animation-delay="5.8s" style="visibility: visible;">
+                    <img class="card-img-top" src="/images/act1.png" alt="welcome">
+                  </div>
+                  <div class="portfolio-desc align-center card-img-overlay">
+                    <div class="folio-info">
+                      <h5><a href="#">Project name 1</a></h5>
+                      <a style="color:blue" href="" class="fancybox"><i class="far fa-edit fa-2x"></i></a>
+                      <a style="color: red;" href="" class="fancybox"><i class="far fa-trash-alt fa-2x"></i></a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+
+
+
+
+
+                 -->
+
+
+
+
+                 <!-- Respaldo del original para reservas
+                 
+                 
+                 {{#each reservations}}
+ <div class="card m-1 act-card" style="width: 20vw;">
     <div class="card-body">
       <h3 class="card-title">{{this.user_id.name}}</h3>
       <p>From:{{this.startDate}}</p>
@@ -65,8 +135,54 @@
       </div>
     </div>
   </div>
+  <br><br>
   {{/each}}
-  </div>
-</div>
-</section>
+                 
+                 
+                 
+                 
+                 
+                 
+                 -->
 
+
+
+                 <!-- Respaldo de original 
+                 
+                 
+                 
+                 {{#each activities}}
+ <div class="card m-1 act-card cardProfile" style="width: 20vw;">
+    <div class="card-body">
+      <h3 class="card-title">{{this.user_id.name}}</h3>
+      <h5 class="card-title">{{this.typeAct}}</h5>
+  {{#if this.time}}
+      <p class="card-text">This activity was scheduled at {{this.time}} and the amount of people that will go are {{this.numPeople}}</p>
+  {{else}}
+      <p class="card-text">This activity was scheduled and the amount of people that will go are {{this.numPeople}}</p>
+  {{/if}}
+      <div id="buttons-card">
+        <form action="/activities/{{this._id}}" method="GET">
+          <input type="submit" class="btn btn-verde m-2" value="Edit">
+        </form>
+        <form action="/activities/delete/{{this._id}}" method="GET">
+          <input type="submit" class="btn text-white btn-danger m-2" value="Delete">
+        </form>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  {{/each}}
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 -->

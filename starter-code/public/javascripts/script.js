@@ -7,4 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
   zoom: 15
 }
 )
-})
+
+
+
+var marker = new mapboxgl.Marker()
+  .setLngLat([-93.664719, 15.844154])
+  .addTo(map);
+
+}, false);
+

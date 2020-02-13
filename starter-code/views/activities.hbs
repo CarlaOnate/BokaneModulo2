@@ -1,5 +1,8 @@
   <section id="activities-section">
-      <h2 id="cam-title" class="h1 pt-5">Activities</h2>
+    <div style="width:100%; display:flex; justify-content:center">
+      <h4 id="act-title" class="text-center pt-3 pb-2" style="color: #2C5559"> <b>Activities</b> </h4>
+       </div>
+      
   <div class="text-center w-75 pb-1 ml-auto mr-auto">
     <p>We offer some activites to entretain our guest, you can choose whatever you like most.</p>
   </div>
@@ -8,7 +11,7 @@
 {{/if}}
   <ul class="ul-activity list-group list-group-horizontal list-unstyled w-100">
     <li class="list-group-item d-flex act-list">
-      <img src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581549298/kayaking_z0bpaz.jpg " class=" align-self-center rounded-lg w-100" alt="Kayaking">
+      <img src="/images/act3.png" class=" align-self-center rounded-lg w-75" alt="Kayaking">
         <h5 class="mt-0 mb-1 ser-title title">Kayak</h5>
         <p>The charge for each kayak is <strong>$100 pesos</strong> the hour.
         There can only be 2 persons on the kayak, we charge by the hour not by the number of people. 
@@ -35,7 +38,7 @@
 
     </li>
     <li class="list-group-item d-flex act-list">
-      <img id="restImg-order" src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581549225/Climber_dujjhl.jpg" class="align-self-center rounded-lg w-75" alt="Restaurant image">
+      <img id="restImg-order" src="/images/act1.png" class="align-self-center rounded-lg w-75" alt="Restaurant image">
         <h5 class=" mt-0 mb-1 ser-title title">Climbing</h5>
         <p class=""> We have all the equipment needed to go climbing, the charge depends if your are going to climb boulders or high peaks. For boulders the price is <strong>$150 pesos</strong> each mattress and the other is priced at <strong>$200 pesos</strong> per person. 
         In case you do not know how to climb, we have experienced teachers who can take you and teach you this amazing sport.</p>
@@ -49,7 +52,7 @@
           </select>
           <div class="form-group">
           <label for="exampleInputEmail1">Number of people:</label>
-          <input required name="numberPeople" type="text" class="form-control" id="" aria-describedby="emailHelp">
+          <input required name="numberPeople" type="number" class="form-control" id="" aria-describedby="emailHelp">
         </div>
           <input type="submit" class="btn btn-verde btn-act" value="Reserve a spot">
         </form>
@@ -60,10 +63,10 @@
 
     </li>
     <li class="list-group-item d-flex act-list">
-      <img id="boat" src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581287029/IMG_5792_abmgiz.jpg" class="align-self-center rounded-lg w-75" alt="Transport image">
+      <img id="boat" src="/images/act2.png" class="align-self-center rounded-lg w-75" alt="Transport image">
       <div class="media-body">
-        <h5 class="mt-0 mb-1 ser-title title text-center">Waterski</h5>
-        <p class="pt-3">To go water skiing the boat needs to be available and the charge for each ride is <strong>$200 pesos the hour</strong>.
+        <h5 class="mt-0 mb-1 ser-title title">Waterski</h5>
+        <p class="">To go water skiing the boat needs to be available and the charge for each ride is <strong>$200 pesos the hour</strong>.
         As well we have the equipment so you don't have to bring anything but a bathing suit. This type of activity need a trained driver so the occupancy of this is limited only to 7 people on the boat. We can provide filming equipment for an extra charge </p>
  {{#if _id}}
         <form action="/activities/waterski/{{_id}}" method="POST">
@@ -75,7 +78,7 @@
           </select>
           <div class="form-group">
           <label for="exampleInputEmail1">Number of people:</label>
-          <input required name="numberPeople" type="text" class="form-control" id="" aria-describedby="emailHelp">
+          <input required name="numberPeople" type="number" class="form-control" id="" aria-describedby="emailHelp">
         </div>
           <input type="submit" class="btn btn-verde btn-act" value="Reserve a spot">
         </form>

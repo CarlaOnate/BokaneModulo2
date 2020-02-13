@@ -1,53 +1,32 @@
- <!-- SECTION 1 BOKANE EXPLICACION -->
-  <section id="desc-bokane" class='d-flex align-items-md-start flex-md-column pl-5 pt-5 ml-3'>
-    <div id="intro-bokane" class="w-75">
-      <h3 id="bokane-title" class=" title">Bokané</h3>
-    <p>We are an ecofriendly resort opening our doors to visitors. We are localted near Boca del Cielo, Chiapas next to the mangrove. Our resort is surrounded by water,
-      we have on one side the mangrove and on the other the ocean. The only way to get here is by boat, but don't worry we'll give you a ride.
-      We have several rooms and a camping area to stay, in case you love the outdoors. You can come also just to have fun, you can practice the activities we have for you to have a fun and amazing experience.</p>
-      <br> Suscribe to our newsletter and we'll give you a <strong>10% discount</strong>
-      </p>
-      <!-- <img id="bokane-img" src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581205991/IMG_4624_2_g0pn5f.jpg"> -->
-    </div>
-    <div id="sus-email" class="align-self-center ml-5">
-      <form action="/" class="form-inline">
-        <div class="form-group mx-sm-3 mb-2">
-          <label id ="suscribe-text"class="pr-2" for="inputPassword2">Suscribe:</label>
-          <input type="email" required class="form-control form-control-sm" id="inputPassword2" placeholder="Email">
-        </div>
-        <button type="submit" class="btn mb-2 form-control-sm btn-verde">Suscribe</button>
+  <!-- SECTION 0 BOKANE PORTADA -->
+ <section id="headerIndex">
+    <div class="headerIndex-container">
+      <h1>Welcome to Bokané</h1>
+      <h2>Our greatest achievement is to be part of your best experiences</h2>
+   <form action="/reservation" method="GET">
+      <input value="BOOK"id="btn-book" type="submit" class="btn btn-outline-secondary">
       </form>
-      {{#if show}}
-      <p>{{msg}}</p>
-      {{/if}}
     </div>
+  </section>
+   <!-- FIN SECTION 0 BOKANE PORTADA -->
+ 
+ <!-- SECTION 1 BOKANE EXPLICACION -->
+  <section style="display:flex; justify-content:space-evenly;align-items:center;">
+    <div style="width:60%;display:flex; justify-content:center;align-items:flex-start;flex-direction:column;text-align: justify;" id="intro-bokane" class="w-5">
+      <h3 id="bokane-title" class=" title">Bokané</h3>
+    <p>We are an ecofriendly resort opening our doors to visitors. We are localted near <b>Boca del Cielo, Chiapas</b> next to the mangrove. Our resort is surrounded by water,
+      we have on one side the mangrove and on the other the ocean. The only way to get here is by boat, but don't worry we'll give you a ride.
+      We have several rooms and a camping area to stay (in case you love the outdoors). You can come also just to have fun, you can practice the activities we have for you to have a fun and amazing experience.</p>
+      </p>
+       
+    </div>
+    <img style="height:180px; margin:45px;" id="bokane-img" src="../images/pet.png">
   </section>
   <!-- FIN SECTION ONE BOKANE EXPLICACION  -->
   
- <!-- SECCION CAMPING -->
- <section class="mt-5" id="camping">
-    <div class="media">
-        <img src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581213485/IMG_2427_rx5pyz.jpg" class="align-self-center mr-3 w-50 pl-5 rounded-lg" alt="camping">
-        <div class="media-body w-50 pl-4">
-            <h5 class="mt-0 title" style="font-size: 2.5rem;">Stay with us!</h5>
-            <p>We have rooms for you to stay in or if you like the outdoors we have also an area for camping.</p>
-            <p>You do not have to worry about anything, we have a restaurant for you to eat in, we provide also kitchen in case you want to cook your own meals. </p>
-            <p>We have several services, such as bathroom private or public, a kiosk for reading and a dock for you to enjoy the sunrise.</p>
-            <p>If you are not what you will be doing here, we can paint a picture. Imagine a climate full or clean air and with the smell of the sea, you will be able to relax and let go of all that city induced stress come and relax wether it is by reading your favorite book or just looking at the waves crash at the beach.</p>
-            <p class="mb-0">Are your interested, reserve a spot and come visit us?</p>
-        <form action="/reservation" method="GET">
-        <input type="submit" value="More Info" class="btn mt-2 form-control-sm pt-1 btn-lg btn-verde">
-         </form>
-        </div>
-    </div>
- </section>
- <section style="display: flex; align-items:center; justify-content:center; margin:25px;">
-   <iframe width="1200" height="480" src="https://www.youtube.com/embed/ALLfAwN4uHM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
- </section>
- <!-- FIN SECCINO CAMPING -->
- <!-- ACTIVITIES SECTION  -->
- <section class="mt-5">
-    <h4 class="text-md-center pr-3 title" title style="font-size: 2.5rem;" id="act-title">Activities</h4>
+<!-- ACTIVITIES SECTION  -->
+ <section class="">
+   <h4 id="act-title" class="text-center pt-3 pb-2" style="color: #2C5559"> <b>Activities</b> </h4>
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -56,47 +35,103 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581274430/GPTempDownload_yapyj3.jpg" class="d-block w-100 img-fluid" alt="...">
-        <div class="carousel-caption d-none d-md-block">
+        <img src="../images/activities1.png" class="imgACT d-block w-100 img-fluid" alt="...">
+        <div class="carousel-caption d-none d-md-block carousel-act">
             <h5>Kayak</h5>
             <p>Take a stroll throw the mangrove</p>
-            <a href="/activities" class="btn btn-verde" >More info</a>
+             <form style="margin-top: 55px;" action="/activities" method="GET">
+             <input value="More  info"id="btn-book" type="submit" class="btn btn-outline-secondary">
+             </form>
         </div>
       </div>
       <div class="carousel-item">
-          <img src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581274586/PHOTO-2020-02-02-15-15-38_rlvi2g.jpg" class="d-block w-100 img-fluid" alt="mangrove">
-        <div class="carousel-caption d-none d-md-block">
+          <img src="../images/activities2.png" class="imgACT d-block w-100 img-fluid" alt="mangrove">
+        <div class="carousel-caption d-none d-md-block carousel-act">
             <h5>Go Climbing</h5>
             <p>Try this new and fun activity and enjoy the nature around</p>
-            <a href="/activities" class="btn btn-verde" >More info</a>
+            <form style="margin-top: 55px;" action="/activities" method="GET">
+             <input value="More  info"id="btn-book" type="submit" class="btn btn-outline-secondary">
+             </form>
         </div>
       </div>
       <div class="carousel-item">
-          <img src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581274708/waterski_xkptae.jpg" class="d-block w-100 img-fluid" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-            <h5 id="waterski">Waterski</h5>
-            <p id="waterski">We have all the equipment you need to have fun on the mangrove</p>
-            <a href="/activities" class="btn btn-verde" >More info</a>
+          <img src="../images/activities3.png" class="imgACT d-block w-100 img-fluid" alt="...">
+        <div class="carousel-caption d-none d-md-block carousel-act">
+            <h5>Waterski</h5>
+            <p>We have all the equipment you need to have fun on the mangrove</p>
+            <form style="margin-top: 55px;" action="/activities" method="GET">
+             <input value="More  info"id="btn-book" type="submit" class="btn btn-outline-secondary">
+             </form>
         </div>
       </div>
     </div>
+
+
+
+
+
     <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
+      <img class="prev" src="../images/bt-prev.png" alt="Previous Frame" style="display: inline;">
     </a>
     <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
+     <img class="next" src="../images/bt-next.png" alt="Next Frame" style="display: inline;">
     </a>
     </div>
  </section>
- <!-- FINAL SECTINO ACTIVITIES -->
+ <!-- FINAL SECTION ACTIVITIES -->
+
+
+
+
+ <!-- SECCION CAMPING -->
+
+<section style="display:flex; justify-content:space-evenly;align-items:center;">
+  <img style="margin:60px 0 20px 0;"src="../images/stay.jpg" class="align-self-center mr-3 w-50 pl-5 rounded-lg" alt="camping">
+    <div style=" margin:20px; width:40%;display:flex; justify-content:space-between;align-items:flex-end;flex-direction:column;text-align: justify;" id="intro-bokane" class="w-5">
+      <h3 id="bokane-title" class=" title">Stay with us!</h3>
+    <p>We have rooms for you to stay in or if you like the <b>outdoors</b> we have also an area for camping. 
+      Imagine a full clean air climate and the smell and sound of the sea, you will be able to relax and let go of all that city induced stress, come and <b>relax</b> wether it is by reading your favorite book or just looking at the waves crash at the beach.</p>
+            <p class="mb-0">If you are interested, reserve a spot and come visit us!</p>
+            <form style="margin-top: 55px;" action="/about-us" method="GET">
+             <input style="color: black;" value="More  info"id="btn-book" type="submit" class="btn btn-outline-secondary">
+             </form>
+    </div>
+  </section>
+
+
+ <!-- FIN SECCINO CAMPING -->
+
+ <!-- SECCION VIDEO -->
+<h4 id="act-title" class="text-center pt-3 pb-2" style="color: #2C5559"> <b>Explore the area</b> </h4>
+ <section style="display: flex; align-items:center; justify-content:center; margin-top:0;">
+   <iframe width="100%" height="480" src="https://www.youtube.com/embed/ALLfAwN4uHM?start=12&end=178"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </section>
+ <!-- FIN SECCINO VIDEO -->
+
+ 
  <!-- MAPBOX -->
   <div id="location" class="">
-  <h4 id="map-title" class="text-center pt-3 pb-2" style="color: #2C5559">Where are we?</h4>
+  <h4 id="map-title" class="text-center pt-3 pb-2" style="color: #2C5559"> <b>Where are we?</b> </h4>
   <div id="map-container" class="ml-auto mr-auto my-0">
-    <div id='map' class="" style='width: 100vw; height: 400px;'></div>
+    <div id='map' class="" style='width: 100vw; height: 480px;'></div>
   </div>
   </div>
   <!-- FINAL MAPBOX -->
 
+<!-- Newlester -->
+  <section style="display:flex; justify-content:center;align-items:center;">
+<div style="margin:50px 0 50px 0;" id="sus-email" class="align-self-center ml-5">
+      <form action="/" class="form-inline">
+        <div class="form-group mx-sm-3 mb-2">
+          <label id ="suscribe-text"class="pr-2" for="inputPassword2">Subscribe to our newsletter and receive our best offers and promotions:</label>
+          <input type="email" required class="form-control form-control-sm" id="inputPassword2" placeholder="Email">
+          </div>
+        <button style="padding: 0 50px 0 50px;" type="submit" class="btn mb-2 form-control-sm btn-verde">Subscribe</button>
+      </form>
+      {{#if show}}
+      <p>{{msg}}</p>
+      {{/if}}
+    </div>
+
+</section>
+<!-- Fin Newlester -->

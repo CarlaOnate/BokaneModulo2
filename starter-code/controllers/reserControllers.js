@@ -276,6 +276,9 @@ exports.editBookPost=async(req,res,next)=>{
    diff = new Date()-new Date(new Date().getFullYear(), 0, 0);
    day = Math.floor(diff/86400000);
   const dayYearTod=day;
+  //Formato en que se va a guardar en la base de 
+  const startDateS=minSD+(3600000*19);
+  const endDateS=minED+(3600000*19);
 //Checamos si la primer fecha es al menos la fecha del día presente
 if(dayYearSD<dayYearTod){
   msg='You need select at less today in start day'
@@ -291,8 +294,8 @@ if(days<=0){
 }  
 
  const obj={
-    startDate:startDate,
-    endDate:endDate,
+    startDate:new Date(startDateS).toLocaleString(),
+    endDate:new Date(endDateS).toLocaleString(),
     days:days,
     totalPrice:priceTotal,
     numAdult:adults,
@@ -302,6 +305,16 @@ if(days<=0){
 await Reservation.findByIdAndUpdate(req.params.id, obj)
 res.redirect('/profile')
 }
+
+
+
+
+
+    
+
+
+
+
 
 //---------------------------------------------------------------------------------------------------
 

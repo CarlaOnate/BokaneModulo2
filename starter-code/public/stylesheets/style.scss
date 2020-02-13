@@ -153,7 +153,7 @@ a {
   font-size: 3rem;
 }
 
-#act-title{
+#act-title, #map-title{
   padding-bottom: 1%;
   font-size: 3rem;
 }
@@ -260,6 +260,8 @@ a {
 }
 
 #profile-section{
+  margin:0;
+  background-color: #ffffff;
   display: flex;
   flex-direction: row;
 }
@@ -342,6 +344,22 @@ width: 500px;
   padding: 5px 60px 5px 60px;
 }
 
+#btn-book{
+  font-size: 1.3rem;
+  color:white;
+  background-color:transparent;
+  margin: 0 10px 60px 10px;
+  border: 3px solid;
+  border-color: #ff9b10;
+  border-radius: 20px 20px 20px 20px;
+  padding: 2px 70px 2px 70px;
+
+}
+
+#btn-book:hover {
+  background-color: #ff9b10;
+}
+//Header INDEX-------------------------------------------------------------------------------
 #reser-form{
   display: flex;
   flex-direction: row;
@@ -379,8 +397,6 @@ border-color:#bac79e
   padding: 5px 60px 5px 60px;
 
 }
-
-
 
 
 
@@ -429,6 +445,67 @@ nav {
 }
 
 //HEADER-----------------------------------------------------------------------------
+
+#headerIndex {
+  width: 100%;
+  height: 100vh;
+  background: url('../images/portada2.png') top center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.headerIndex-container{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  color:rgb(225, 225, 225);
+}
+.headerIndex-container h1{
+margin-top: 180px;
+font-size: 2rem;
+}
+.headerIndex-container h2{
+  font-size: 1.7rem;
+  
+  }
+
+/*
+//Header Index
+#headerIndex{
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+}
+*/
+//Header Index
+
 
 /*CHECKBOXES  */
 .custom-control-label::before {
@@ -591,7 +668,6 @@ nav {
 
 .social-network a.icoInstagram:hover {
   background-color: #bd4c8d;
-
 }
 
 
@@ -623,4 +699,90 @@ nav {
   transition: all 0.8s;
 }
 
+//INDEX CAROUSEL GALLERY
 
+.carousel-act{
+color: white;
+opacity: 1;
+height: 70%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.carousel-act h5{
+  font-size: 5.5rem;
+}
+.carousel-act p{
+  font-size: 2rem;
+}
+
+
+#btn-book:hover {
+  background-color: #ff9b10;
+}
+
+.imgACT{
+ filter:blur(2px);
+}
+
+
+
+
+//Profile activities
+
+
+
+.portfolio-item .portfolio-desc {
+  background:  #5C7345;
+
+}
+.portfolio-item .portfolio-desc {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  color: rgba(220, 220, 220, 0.966);
+}
+.portfolio-item .portfolio-desc .folio-info {
+  top: -80px;
+  padding: 10px;
+  height: 0;
+  opacity: 0;
+  position: relative;
+}
+
+
+.portfolio-item:hover .portfolio-desc {
+  padding-top: 0;
+  height: 100%;
+  transition: all 400ms ease-in 0s;
+  opacity: 0.95;
+}
+.portfolio-item:hover .folio-info {
+  height: 100%;
+  opacity: 1;
+  transition: all 800ms ease-in-out 0s;
+  top: -5px;
+}
+
+
+
+.align-center i:hover {
+
+  cursor: pointer;
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  transition: all 0.7s;
+
+}
+
+
+//card profile activities
