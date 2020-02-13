@@ -75,6 +75,19 @@ exports.reserCheckView=(req,res,next)=>{
   const {days,a,c,op,sd,ed}=req.query
   const perNigth=500;
   const perTotal=perNigth*days;
+  let img='';
+switch (op){
+case '1':
+  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581613983/room1_obnryd.jpg'
+  break;
+case '2':
+  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581613983/room2_qcwwco.jpg'
+  break;
+case '3':
+  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581613984/room3_lcxeao.jpg'
+  break;
+}
+  //-----------------------------------------------------------opijohiogiyfcccuiyfviuonpoopnnpiuiv
   const obj={
     days:days,
     perNigth:perNigth,
@@ -83,7 +96,8 @@ exports.reserCheckView=(req,res,next)=>{
     children:c,
     room:op,
     startDate:sd,
-    endDate:ed
+    endDate:ed,
+    img:img
   }
  if(req.isAuthenticated()) return res.render('reservations/check',{obj, show:false, profile:true})
 res.render('reservations/check',{obj, show:false, profile:false})
@@ -181,15 +195,19 @@ exports.reserBookPost= async(req,res,next)=>{
     }
   
 let nameRoom='';
+let img='';
 switch (room){
 case '1':
   nameRoom='Carla Room'
+  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581615492/r1_pt1pvj.png'
   break;
 case '2':
   nameRoom='Dova Room'
+  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581615492/r2_wezkii.png'
   break;
 case '3':
   nameRoom='Avenu Place'
+  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581615492/r3_habxxx.png'
   break;
 }
 //Define Fecha con hora de Entrada y Salida
@@ -203,7 +221,8 @@ const endDateS=Number(endDate)+(3600000*19);
     totalPrice:perTotal,
     numAdult:adults,
     numChild:children,
-    room:nameRoom
+    room:nameRoom,
+    img:img,
   }
   //Creamos una nueva reservacion ligada al usuario
   const reser=await Reservation.create(newRes);
@@ -292,7 +311,19 @@ if(days<=0){
   res.render("reservations/editBook",{msg})
   return;
 }  
-
+//Comparamos valor de room para guardar su img correspondiente
+let img='';
+switch (room){
+case 'Carla Room':
+  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581615492/r1_pt1pvj.png'
+  break;
+case 'Dova Room':
+  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581615492/r2_wezkii.png'
+  break;
+case 'Avenu Place':
+  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581615492/r3_habxxx.png'
+  break;
+}
  const obj={
     startDate:new Date(startDateS).toLocaleString(),
     endDate:new Date(endDateS).toLocaleString(),
@@ -300,7 +331,8 @@ if(days<=0){
     totalPrice:priceTotal,
     numAdult:adults,
     numChild:children,
-    room:room
+    room:room,
+    img:img
  }
 await Reservation.findByIdAndUpdate(req.params.id, obj)
 res.redirect('/profile')

@@ -17,7 +17,8 @@ const activitySchema = new Schema({
   },
   time:{
     type: String,
-  }
+  },
+  img:String
 
 })
 

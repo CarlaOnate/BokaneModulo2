@@ -1,41 +1,83 @@
-<section id="row-forms">
-<div>
-<form action="/auth/login" method="POST">
-  <h2>Login</h2>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input name="email" required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input name="password" required type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <button type="submit" class="btn btn-primary">Login</button>
-  <br>
-  <div id="button-google">
-  </div>
+<section style="display: flex; justify-content:center;">
+<h4 id="msgError" style="color:rgb(255, 50, 50)" >{{msg}}</h4>
+</section>
+<section style="padding-top: 25px;" id="row-forms">
+  
+<div style="margin-bottom:100px;">
+<form style="display: flex; justify-content:center;flex-direction:column" action="/auth/login" method="POST"> 
+  <h2 style="text-align: center; margin-bottom:18px;">Login</h2>
+  
+  
+  
+ 
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1">Email address</label>
+              <input required name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="you@example.com" aria-describedby="emailHelp">
+            </div>
+
+             <div class="mb-3">
+              <label for="exampleInputPassword1">Password</label>
+              <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password..." required="">  
+            </div>
+
+  
+ 
+<div id="div-btn-continue">
+<input style="margin:0; margin-bottom:110px; margin-top:15px;"  value="Login"id="btn-contiune" type="submit" class="btn btn-outline-secondary">
+</div>
+  
+
 </form>
+
+<div id="button-google">
 <a href="/auth/google"><button class="btn btn-danger"><i class="fab fa-google"></i> Log in with Google</button></a>
-<p class="text-info pt-3">{{msg}}</p>
+</div>
 </div>
 
 
-<div>
-<form action="/auth/signup" method="POST">
-  <h2>Signup</h2>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Name</label>
-    <input name="name" type="text" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input name="email" type="email" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-  <div class="form-group">
-    <label  for="exampleInputPassword1">Password</label>
-    <input name="password" type="password" required class="form-control" id="exampleInputPassword1">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+<div style="margin-bottom:100px;">
+<form style="display: flex; justify-content:center;flex-direction:column" action="/auth/signup" method="POST">
+  <h2 style="text-align: center; margin-bottom:18px;">Signup</h2>
+
+
+  <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">First name</label>
+                <input name="firstName" type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Last name</label>
+                <input name="lastName" type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email">Email</label>
+              <input required name="email" type="email" class="form-control" id="email" placeholder="you@example.com">
+            </div>
+
+            <div class="mb-3">
+              <label for="address">Password <span style="font-size: 0.7rem; color:gray">(At lest 8 digits)</span></label>
+              <input name="password" type="password" class="form-control" id="address" placeholder="Password..." required="">
+              
+            </div>
+
+            <div class="mb-3">
+              <label for="address2">Confirm Password</label>
+              <input name="confirmPassword" type="password" class="form-control" id="address2" placeholder="Password...">
+            </div>
+
+
+
+  <div id="div-btn-continue">
+<input style="margin:0; margin-bottom:18px; margin-top:15px;"  value="Submit"id="btn-contiune" type="submit" class="btn btn-outline-secondary">
+</div>
+
+
+
 </form>
 </div>
 

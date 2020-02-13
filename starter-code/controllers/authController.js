@@ -6,13 +6,23 @@ exports.signupView = (req, res) => {
 }
 
 exports.signup = async (req, res, next) => {
-    const { name, email, password } = req.body;
-
+    const { firstName, lastName,confirmPassword, email, password } = req.body;
     const userOnDB = await User.findOne({ email })
-
+    var name=`${firstName} ${lastName}`;
+  //Checa si ya existe el usuario
     if (userOnDB !== null) {
       return res.render("auth/auth", { msg: "The email is already registered, please log in" })
     }
+
+    //Checa si la contraseña tiene al menos 8 digitos
+  if(password.length<8){
+    return res.render("auth/auth", { msg: 'Your password need at less 8 digits' })
+  }
+ // Checa si la contraseña y su confirmacion son identicas
+ if(password!==confirmPassword){
+    return res.render("auth/auth", { msg: 'The passwords dont match' })
+  }
+   //Si todo esta OK, registramos un nuevo usuraio
     let user = await User.register({ name, email }, password)
 
     passport.authenticate("local", { //se llama a si misma porque es un middleware.

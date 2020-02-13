@@ -232,9 +232,7 @@ a {
 }
 
 #warning-act{
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
+
   margin-bottom: 5%;
 }
 
@@ -449,7 +447,7 @@ nav {
 #headerIndex {
   width: 100%;
   height: 100vh;
-  background: url('../images/portada2.png') top center;
+  background: url('https://res.cloudinary.com/dxxdamndt/image/upload/v1581613983/portada2_z1rcvm.png') top center;
   background-size: cover;
   position: relative;
   display: flex;

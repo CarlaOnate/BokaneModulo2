@@ -7,12 +7,26 @@ exports.activity = async (req, res) => {
     let {activity, id_user} = req.params
     let {numberPeople, time} = req.body
     let user = await User.findOne({_id: id_user})
+    //Comparamos valor de activity para guardar su img correspondiente
+let img='';
+switch (activity){
+case 'kayak':
+  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581613982/act3_y1dzxz.png'
+  break;
+case 'climbing':
+  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581613982/act1_na40gb.png'
+  break;
+case 'waterski':
+  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581613982/act2_eeqiq9.png'
+  break;
+}
     let newAct = await Activity.create({
       name: user.name,
       user_id: id_user,
       numPeople: numberPeople,
       typeAct: activity,
-      time: time
+      time: time,
+      img:img
     })
     await user.activities.push(newAct._id)
     await user.save()

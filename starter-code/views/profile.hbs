@@ -17,13 +17,13 @@
 <div class="portfolio-item card" style="width: 280px; margin:0;">
   <div class="card-body">
      <div class="wow rotateInUpLeft animated" data-animation-delay="5.8s" style="visibility: visible;">
-       <img class="card-img-top" src="/images/act1.png" alt="welcome">
+       <img class="card-img-top" src="{{this.img}}" alt="welcome">
      </div>
      <div style="display: flex; align-items:flex-start;" class="portfolio-desc align-center card-img-overlay">
        <div class="folio-info">
          <br>
          <h6 style="text-align: center; font-size:  1rem;" ><b>{{this.user_id.name}}</b></h6>
-         <h5 style="text-align: center; font-size:.8rem;" ><b>{{this.typeAct}}</b></h5>
+         <p style="text-align: center;" ><b>{{this.typeAct}}</b></p>
          <p style="text-align: justify;" class="card-text">This activity was scheduled at <b>{{this.time}}</b> and the amount of people that will go are <b>{{this.numPeople}}</b></p>
          <br><br>
          <div style="display:flex; justify-content:space-between;">
@@ -44,7 +44,7 @@
 <div class="portfolio-item card" style="width: 300px; margin:0;">
   <div class="card-body">
                   <div class="wow rotateInUpLeft animated" data-animation-delay="5.8s" style="visibility: visible;">
-                    <img class="card-img-top" src="/images/res.png" alt="welcome">
+                    <img class="card-img-top" src="{{this.img}}" alt="welcome">
                   </div>
                   <div style="display: flex; align-items:flex-start;" class="portfolio-desc align-center card-img-overlay">
                     <div class="folio-info">

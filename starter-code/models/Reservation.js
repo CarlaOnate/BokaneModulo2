@@ -15,6 +15,7 @@ const reservationSchema = new Schema({
     type: String,
     enum: ['Carla Room', 'Dova Room', 'Avenu Place']
   },
+  img:String,
   digitalPayment: {
       type: Boolean,
       default:false

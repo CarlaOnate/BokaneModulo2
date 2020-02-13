@@ -8,9 +8,6 @@
 
 
 
-
-
-
 <section style="display: flex; justify-content:center;">
 <h4 id="msgError" style="color:rgb(255, 50, 50)" >{{msg}}</h4>
 </section>
@@ -24,33 +21,24 @@
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
                 <input name="firstName" type="text" class="form-control" id="firstName" placeholder="" value="" required="">
-                <div class="invalid-feedback">
-                  Valid first name is required.
-                </div>
+                
               </div>
               <div class="col-md-6 mb-3">
                 <label for="lastName">Last name</label>
                 <input name="lastName" type="text" class="form-control" id="lastName" placeholder="" value="" required="">
-                <div class="invalid-feedback">
-                  Valid last name is required.
-                </div>
+                
               </div>
             </div>
 
             <div class="mb-3">
               <label for="email">Email</label>
-              <input name="email" type="email" class="form-control" id="email" placeholder="you@example.com">
-              <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
-              </div>
+              <input required name="email" type="email" class="form-control" id="email" placeholder="you@example.com">
             </div>
 
             <div class="mb-3">
-              <label for="address">Password</label>
+              <label for="address">Password <span style="font-size: 0.7rem; color:gray">(At lest 8 digits)</span></label>
               <input name="password" type="password" class="form-control" id="address" placeholder="Password..." required="">
-              <div class="invalid-feedback">
-                Please enter your shipping address.
-              </div>
+              
             </div>
 
             <div class="mb-3">
