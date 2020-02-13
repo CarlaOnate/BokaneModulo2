@@ -12,30 +12,31 @@
 
 
 <div data-spy="scroll" data-target="#card-scroll" data-offset="0" class="scrollspy-example mb-3" id="act-cards" style="display: flex; justify-content:center;">
-  <h5 id="act-title" class="text-center" style="font-size:2.5rem; color: #2C5559";>Activities</h5>
+  <h5 id="act-title" class="text-center" style="font-size:2.5rem; color: #2C5559;">Activities</h5>
  {{#each activities}}
 <div class="portfolio-item card" style="width: 280px; margin:0;">
   <div class="card-body">
-                  <div class="wow rotateInUpLeft animated" data-animation-delay="5.8s" style="visibility: visible;">
-                    <img class="card-img-top" src="/images/act1.png" alt="welcome">
-                  </div>
-                  <div style="display: flex; align-items:flex-start;" class="portfolio-desc align-center card-img-overlay">
-                    <div class="folio-info">
-                      <br>
-                      <h5 style="text-align: center; font-size:1.8rem;" ><b>{{this.typeAct}}</b></h5>        
-                      <p style="text-align: justify;" class="card-text">This activity was scheduled at <b>{{this.time}}</b> and the amount of people that will go are <b>{{this.numPeople}}</b></p>
-                      <br><br>
-                      <div style="display:flex; justify-content:space-between;"> 
-                      <a style="color:blue;" href="/activities/{{this._id}}" class="fancybox"><i class="far fa-edit fa-2x"></i></a>
-                      <a style="color: red;" href="/activities/delete/{{this._id}}" class="fancybox"><i class="far fa-trash-alt fa-2x"></i></a>
-                      </div>                   
-                    </div>
-                  </div>
-                  </div>
-                </div>
-                <br><br>
-              {{/each}}
-             </div>
+     <div class="wow rotateInUpLeft animated" data-animation-delay="5.8s" style="visibility: visible;">
+       <img class="card-img-top" src="/images/act1.png" alt="welcome">
+     </div>
+     <div style="display: flex; align-items:flex-start;" class="portfolio-desc align-center card-img-overlay">
+       <div class="folio-info">
+         <br>
+         <h6 style="text-align: center; font-size:  1rem;" ><b>{{this.user_id.name}}</b></h6>
+         <h5 style="text-align: center; font-size:.8rem;" ><b>{{this.typeAct}}</b></h5>
+         <p style="text-align: justify;" class="card-text">This activity was scheduled at <b>{{this.time}}</b> and the amount of people that will go are <b>{{this.numPeople}}</b></p>
+         <br><br>
+         <div style="display:flex; justify-content:space-between;">
+         <a style="color:blue;" href="/activities/{{this._id}}" class="fancybox"><i class="far fa-edit fa-2x"></i></a>
+         <a style="color: red;" href="/activities/delete/{{this._id}}" class="fancybox"><i class="far fa-trash-alt fa-2x"></i></a>
+         </div>
+       </div>
+     </div>
+     </div>
+   </div>
+   <br><br>
+ {{/each}}
+</div>
 
 <div data-spy="scroll" data-target="#card-scroll" data-offset="0" class="scrollspy-example mb-3" id="act-cards" style="display: flex; justify-content:center;">
   <h5 id="act-title" class="text-center" style="font-size:2.5rem; color: #2C5559";> Reservations</h5>
@@ -46,7 +47,8 @@
                     <img class="card-img-top" src="/images/res.png" alt="welcome">
                   </div>
                   <div style="display: flex; align-items:flex-start;" class="portfolio-desc align-center card-img-overlay">
-                    <div class="folio-info">   
+                    <div class="folio-info">
+                      <h6 style="text-align: center; font-size:  1rem;" ><b>{{this.user_id.name}}</b></h6>
                       <p><b>From: </b>{{this.startDate}}</p>
                       <p><b>To: </b>{{this.endDate}}</p>
                       <p>{{this.numAdult}} adults and {{this.numChild}} children</p>
