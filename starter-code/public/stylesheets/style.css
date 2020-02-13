@@ -264,9 +264,9 @@ a {
   width: 500px; }
 
 .card {
-  box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.5);
-  box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.3);
   margin: 50px; }
 
 #reser-header {
@@ -344,7 +344,8 @@ nav {
   transition-delay: 0s; }
 
 .site-header {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: #242424;
+  opacity: 0.95;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px); }
 
