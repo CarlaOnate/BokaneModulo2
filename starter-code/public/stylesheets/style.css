@@ -642,48 +642,25 @@ nav {
   -ms-transition: all 0.7s;
   transition: all 0.7s; }
 
-#about-us {
+#terms {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center; }
 
-#about-us-title h2 {
+.centered {
+  width: 70%; }
+
+#terms-main-title {
   padding-top: 2%;
-  font-size: 3.5rem;
-  color: #2C5559; }
+  font-size: 3rem;
+  color: #225473; }
 
-#history {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center; }
-
-#about-us-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center; }
-
-#about-us-title img {
-  width: 100vw; }
-
-#history-title, #where-title, #gallery-title {
+.term-title {
   font-size: 2rem;
   color: #2C5559; }
 
-#history-title {
-  padding-top: 4%; }
-
-#where-title {
-  padding-top: 5%;
-  padding-bottom: 0;
-  margin: 0; }
-
-#gallery-title {
-  margin-bottom: 2%;
-  margin-top: 3%;
-  padding: 0; }
+.bottom-term {
+  padding-bottom: 5%; }
 
 /*# sourceMappingURL=style.css.map */
