@@ -1,8 +1,6 @@
 const User = require('../models/User')
 const Activity = require('../models/Activity')
 const Reservation = require('../models/Reservation')
-// const actAll = []
-// const resAll = []
 
 exports.profileView = async (req, res, next) => {
     if(req.user.role === 'ADMIN'){
@@ -10,7 +8,6 @@ exports.profileView = async (req, res, next) => {
         let reservations = await Reservation.find().populate('user_id')
         let user = await User.findById(req.user._id)
         res.render('profile', {activities, reservations, user, show:false, profile:true, admin:true})
-        console.log(reservations)
     } else {
     let activities = await Activity.find({user_id: req.user._id})
     let reservations = await Reservation.find({user_id: req.user._id})

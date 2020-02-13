@@ -56,13 +56,13 @@
                         {{#if this.digitalPayment}}
                          <p>Payed</p>
                         {{/if}}
-                      
-                      <div style="display:flex; justify-content:space-between;"> 
+
+                      <div style="display:flex; justify-content:space-between;">
                         {{#unless this.digitalPayment}}
                         <a style="color:blue;" href="/reservation/edit/{{this._id}}" class="fancybox"><i class="far fa-edit fa-2x"></i></a>
                         {{/unless}}
                       <a style="color: red;" href="/reservation/delete/{{this._id}}" class="fancybox"><i class="far fa-trash-alt fa-2x"></i></a>
-                      </div>                   
+                      </div>
                     </div>
                   </div>
                   </div>
