@@ -14,7 +14,7 @@ through the app and which user did the reservation.
 
 ## Landing
 
-[Landing page](landing-page.gif)
+[Landing page](./landing-page.gif)
 
 ## Wanna try it?
 You can create your new user, every user is created as 'Guest' so you will only be able to see your reservations.
