@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
+<link rel="shortcut icon" type="image/ico" href="/images/favicon.ico"/>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link type="text/css" rel="stylesheet" href="/stylesheets/style.css"/>
@@ -15,32 +15,39 @@
 <body>
 
 
-<nav class="site-header sticky-top py-1">
-  <div class="container d-flex flex-column flex-md-row justify-content-between">
-    <a class="py" href="/" style="padding:40" aria-label="Product">
-      <img id="logo-image" src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581191814/tent_ifvsz2.png" width="35" height="35" margin=0 class="d-inline-block align-top ml-4 my-0" alt="CompanyLogo">
+<nav>
+<a href="/" style="margin-right: 250px;">
+      <img src="https://res.cloudinary.com/dxxdamndt/image/upload/ar_1:1,bo_2px_solid_rgb:5c7345,c_fill,g_auto,r_max,w_50,z_0.1/v1581289307/camping-tent_qy6hk1.png" alt="CompanyLogo">
     </a>
-    <a class="py-2 d-none d-md-inline-block" href="/reservation">Booking</a>
-    <a class="py-2 d-none d-md-inline-block" href="/activities">Activities</a>
+  <div id="menuToggle">
+<input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+    <ul id="menu">
+    <a href="/reservation"><li>Booking</li></a>
+    <a href="/activities"><li>Activities</li></a>
 {{#if profile}}
-    <a class="py-2 d-none d-md-inline-block" href="/profile">Profile</a>
+    <a href="/profile"><li>Profile</li></a>
 {{else}}
-    <a class="py-2 d-none d-md-inline-block" href="/auth/login">Login</a>
+    <a style="width: 20px;" href="/auth/login"><li>Login</li></a>
 {{/if}}
 {{#if profile}}
-    <a class="py-2 d-none d-md-inline-block" href="/auth/logout">Logout</a>
+    <a href="/auth/logout"><li>Logout</li></a>
 {{else}}
-    <a class="py-2 d-none d-md-inline-block" href="/auth/signup">Sign up</a>
+    <a href="/auth/signup#target-signup"><li>Signup</li></a>
 {{/if}}
+</ul>
   </div>
 </nav>
 
 
 
 
+
+
+
   {{{body}}}
-
-
 
 
   <section id="footer" class="section footer">
@@ -64,6 +71,7 @@
 
  <section id="footer-terms">
   <p>© 2020 BOKANE ECOTURISM & RESORTS. ALL RIGHTS RESERVED - <a href="/terms">TERMS & CONDITIONS</a></p>
+
 </section>
 
   </section>

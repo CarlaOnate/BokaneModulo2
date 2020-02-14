@@ -2,31 +2,35 @@
  <section id="headerIndex">
     <div class="headerIndex-container">
       <h1>Welcome to Bokané</h1>
-      <h2>Our greatest achievement is to be part of your best experiences</h2>
+      <h2 id="ourindex">Our greatest achievement is to be part of your best experiences</h2>
    <form action="/reservation" method="GET">
       <input value="BOOK"id="btn-book" type="submit" class="btn btn-outline-secondary">
       </form>
     </div>
   </section>
    <!-- FIN SECTION 0 BOKANE PORTADA -->
- 
+  <div style="height: 125px; display:flex; align-items:center;justify-content:center;" >
+
+  </div>
  <!-- SECTION 1 BOKANE EXPLICACION -->
-  <section style="display:flex; justify-content:space-evenly;align-items:center;">
+  <section id="indexBok">
     <div style="width:60%;display:flex; justify-content:center;align-items:flex-start;flex-direction:column;text-align: justify;" id="intro-bokane" class="w-5">
       <h3 id="bokane-title" class=" title">Bokané</h3>
-    <p>We are an ecofriendly resort opening our doors to visitors. We are localted near <b>Boca del Cielo, Chiapas</b> next to the mangrove. Our resort is surrounded by water,
+    <p style="line-height : 35px;" >We are an ecofriendly resort opening our doors to visitors. We are localted near <b>Boca del Cielo, Chiapas</b> next to the mangrove. Our resort is surrounded by water,
       we have on one side the mangrove and on the other the ocean. The only way to get here is by boat, but don't worry we'll give you a ride.
       We have several rooms and a camping area to stay (in case you love the outdoors). You can come also just to have fun, you can practice the activities we have for you to have a fun and amazing experience.</p>
       </p>
        
     </div>
-    <img style="height:180px; margin:45px;" id="bokane-img" src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581613982/pet_sb3noj.png">
+    <img style="height:250px; margin:45px;" id="bokane-img" src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581613982/pet_sb3noj.png">
   </section>
   <!-- FIN SECTION ONE BOKANE EXPLICACION  -->
-  
+  <div style="height: 180px; display:flex; align-items:center;justify-content:center; margin-top:160px;" >
+  <h4 id="act-title" class="text-center pt-3 pb-2" style="color: #2C5559;"> <b>Activities</b> </h4>
+  </div>
 <!-- ACTIVITIES SECTION  -->
- <section class="">
-   <h4 id="act-title" class="text-center pt-3 pb-2" style="color: #2C5559"> <b>Activities</b> </h4>
+ <section >
+   
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -81,18 +85,22 @@
  <!-- FINAL SECTION ACTIVITIES -->
 
 
-
+ <div style="height: 90px; display:flex; align-items:center;justify-content:center;" >
+  
+  </div>
 
  <!-- SECCION CAMPING -->
 
-<section style="display:flex; justify-content:space-evenly;align-items:center;">
-  <img style="margin:60px 0 20px 0;"src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581613984/stay_ozevto.jpg" class="align-self-center mr-3 w-50 pl-5 rounded-lg" alt="camping">
-    <div style=" margin:20px; width:40%;display:flex; justify-content:space-between;align-items:flex-end;flex-direction:column;text-align: justify;" id="intro-bokane" class="w-5">
-      <h3 id="bokane-title" class=" title">Stay with us!</h3>
-    <p>We have rooms for you to stay in or if you like the <b>outdoors</b> we have also an area for camping.
+<section id="indexCamping">
+  
+  <img id="imgCampi" style="margin:60px 0 20px 0; width:250px;" src="https://res.cloudinary.com/dxxdamndt/image/upload/v1581613984/stay_ozevto.jpg" class="align-self-center mr-3 w-50 pl-5 rounded-lg" alt="camping">
+    
+    <div id="intro-bokane" class="w-5">
+      <h3 id="bokane-title" class=" title">Stay with us!</h3><br>
+    <p style="line-height : 35px;" >We have rooms for you to stay in or if you like the <b>outdoors</b> we have also an area for camping.
       Imagine a full clean air climate and the smell and sound of the sea, you will be able to relax and let go of all that city induced stress, come and <b>relax</b> wether it is by reading your favorite book or just looking at the waves crash at the beach.</p>
-            <p class="mb-0">If you are interested, reserve a spot and come visit us!</p>
-            <form style="margin-top: 55px;" action="/reservation" method="GET">
+           <br> <p class="mb-0">If you are interested, reserve a spot and come visit us!</p>
+            <form style="margin-top: 55px; display:flex;justify-item:center;" action="/reservation" method="GET">
              <input style="color: black;" value="Booking"id="btn-book" type="submit" class="btn btn-outline-secondary">
              </form>
     </div>
@@ -100,16 +108,20 @@
 
 
  <!-- FIN SECCINO CAMPING -->
-
+ <div style="height: 180px; display:flex; align-items:center;justify-content:center;" >
+  <h4 id="act-title" class="text-center pt-3 pb-2" style="color: #2C5559"> <b>Explore the area</b> </h4>
+  </div>
  <!-- SECCION VIDEO -->
-<h4 id="act-title" class="text-center pt-3 pb-2" style="color: #2C5559"> <b>Explore the area</b> </h4>
+
  <section style="display: flex; align-items:center; justify-content:center; margin-top:0;">
    <iframe width="100%" height="480" src="https://www.youtube.com/embed/ALLfAwN4uHM?start=12&end=178"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </section>
  <!-- FIN SECCINO VIDEO -->
-
+ <div style="height: 180px; display:flex; align-items:center;justify-content:center;" >
+<h4 id="act-title" class="text-center pt-3 pb-2" style="color: #2C5559"> <b>Gallery</b> </h4>
+  </div>
  {{!-- INICIO GALLERY --}}
- <h4 id="act-title" class="text-center pt-3 pb-2" style="color: #2C5559"> <b>Gallery</b> </h4>
+ 
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -144,10 +156,12 @@
 </div>
 
 {{!-- FIN GALLERY --}}
- 
+  <div style="height: 200px; display:flex; align-items:center;justify-content:center;" >
+  <h4 id="map-title" class="text-center pt-3 pb-2" style="color: #2C5559"> <b>Where are we?</b> </h4>
+  </div>
  <!-- MAPBOX -->
   <div id="location" class="">
-  <h4 id="map-title" class="text-center pt-3 pb-2" style="color: #2C5559"> <b>Where are we?</b> </h4>
+
   <div id="map-container" class="ml-auto mr-auto my-0">
     <div id='map' class="" style='width: 100vw; height: 480px;'></div>
   </div>
@@ -155,8 +169,8 @@
   <!-- FINAL MAPBOX -->
 
 <!-- Newlester -->
-  <section style="display:flex; justify-content:center;align-items:center;">
-<div style="margin:50px 0 50px 0;" id="sus-email" class="align-self-center ml-5">
+  <section style="display:flex; justify-content:center;align-items:center; width:80vw">
+<div style="margin:90px 0 90px 0;" id="sus-email" class="align-self-center ml-5">
       <form action="/" class="form-inline">
         <div class="form-group mx-sm-3 mb-2">
           <label id ="suscribe-text"class="pr-2" for="inputPassword2">Subscribe to our newsletter and receive our best offers and promotions:</label>

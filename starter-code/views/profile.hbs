@@ -1,7 +1,7 @@
 
 <section id="profile-section">
-  <div id="profile" style="height: 100vh; background-color:rgb(223, 238, 224); padding:0 15px 0 15px;">
-  <h4 id="act-title" class="text-center pt-3 pb-2" style="color: hsl(185, 24%, 16%)"> <b>Profile</b> </h4>
+  <div id="profile" style="height: 100vh; background-color:rgb(223, 238, 224); padding:0 15px 50px 15px;">
+  <h4 id="act-titleP" class="text-center pt-3 pb-2" style="color: hsl(185, 24%, 16%)"> <b>Profile</b> </h4>
   <img src="{{user.image}}" class="w-50 rounded-lg mb-3" alt="There is no profile picture">
   <p class="font-weight-bold">Name: <p>{{user.name}}</p></p>
   <p class="font-weight-bold">Email: <p>{{user.email}}</p></p>
@@ -11,24 +11,24 @@
   </div>
 
 
-<div data-spy="scroll" data-target="#card-scroll" data-offset="0" class="scrollspy-example mb-3" id="act-cards" style="display: flex; justify-content:center;">
-  <h5 id="act-title" class="text-center" style="font-size:2.5rem; color: #2C5559;">Activities</h5>
+<div style=data-spy="scroll" data-target="#card-scroll" data-offset="0" class="scrollspy-example mb-3" id="act-cards" style="display: flex; justify-content:center;">
+  <h5 class="text-center act-title" style="color: #2C5559;">Activities</h5>
  {{#each activities}}
 <div class="portfolio-item card" style="width: 280px; margin:0;">
-  <div class="card-body">
+  <div style="padding:0; margin:0;" class="card">
      <div class="wow rotateInUpLeft animated" data-animation-delay="5.8s" style="visibility: visible;">
        <img class="card-img-top" src="{{this.img}}" alt="welcome">
      </div>
      <div style="display: flex; align-items:flex-start;" class="portfolio-desc align-center card-img-overlay">
        <div class="folio-info">
          <br>
-         <h6 style="text-align: center; font-size:  1rem;" ><b>{{this.user_id.name}}</b></h6>
-         <p style="text-align: center;" ><b>{{this.typeAct}}</b></p>
-         <p style="text-align: justify;" class="card-text">This activity was scheduled at <b>{{this.time}}</b> and the amount of people that will go are <b>{{this.numPeople}}</b></p>
+         <h6 class="edP" style="text-align: center; font-size:  1rem;" ><b>{{this.user_id.name}}</b></h6>
+         <p class="edP" style="text-align: center;" ><b>{{this.typeAct}}</b></p>
+         <p class="edP" style="text-align: justify;" class="card-text">This activity was scheduled at <b>{{this.time}}</b> and the amount of people that will go are <b>{{this.numPeople}}</b></p>
          <br><br>
          <div style="display:flex; justify-content:space-between;">
          <a style="color:blue;" href="/activities/{{this._id}}" class="fancybox"><i class="far fa-edit fa-2x"></i></a>
-         <a style="color: red;" href="/activities/delete/{{this._id}}" class="fancybox"><i class="far fa-trash-alt fa-2x"></i></a>
+         <a style="color: red; " href="/activities/delete/{{this._id}}" class="fancybox"><i class="far fa-trash-alt fa-2x"></i></a>
          </div>
        </div>
      </div>
@@ -39,22 +39,22 @@
 </div>
 
 <div data-spy="scroll" data-target="#card-scroll" data-offset="0" class="scrollspy-example mb-3" id="act-cards" style="display: flex; justify-content:center;">
-  <h5 id="act-title" class="text-center" style="font-size:2.5rem; color: #2C5559";> Reservations</h5>
+  <h5 class="text-center act-title" style="color: #2C5559";> Reservations</h5>
  {{#each reservations}}
 <div class="portfolio-item card" style="width: 300px; margin:0;">
-  <div class="card-body">
+  <div style="padding:0; margin:0;"  class="card">
                   <div class="wow rotateInUpLeft animated" data-animation-delay="5.8s" style="visibility: visible;">
                     <img class="card-img-top" src="{{this.img}}" alt="welcome">
                   </div>
                   <div style="display: flex; align-items:flex-start;" class="portfolio-desc align-center card-img-overlay">
                     <div class="folio-info">
-                      <h6 style="text-align: center; font-size:  1rem;" ><b>{{this.user_id.name}}</b></h6>
-                      <p><b>From: </b>{{this.startDate}}</p>
-                      <p><b>To: </b>{{this.endDate}}</p>
-                      <p>{{this.numAdult}} adults and {{this.numChild}} children</p>
-                      <p><b>Room: </b>{{this.room}}</p>
+                      <h6 class="edP" style="text-align: center; font-size:  1rem;" ><b>{{this.user_id.name}}</b></h6>
+                      <p class="edP"><b>From: </b>{{this.startDate}}</p>
+                      <p class="edP"><b>To: </b>{{this.endDate}}</p>
+                      <p class="edP">{{this.numAdult}} adults and {{this.numChild}} children</p>
+                      <p class="edP"><b>Room: </b>{{this.room}}</p>
                         {{#if this.digitalPayment}}
-                         <p>Payed</p>
+                         <p class="edP">Payed</p>
                         {{/if}}
 
                       <div style="display:flex; justify-content:space-between;">

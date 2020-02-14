@@ -144,6 +144,7 @@ exports.reserBookPost= async(req,res,next)=>{
     endDate:endDate,
     perTotal:perTotal
   }
+
 //Solo se ejecutara este codigo si no hay usuarios logeados
   if(!req.isAuthenticated()){
   //Busca el nuevo usuraio
@@ -231,7 +232,7 @@ const endDateS=Number(endDate)+(3600000*19);
   await user.save()
 
   passport.authenticate("local", { //se llama a si misma porque es un middleware.
-    successRedirect: "/",
+    successRedirect: "/reservation/book-complete/${id}",
     failureRedirect: "/auth/login",
     failureFlash: true
 })(req, res, next)
