@@ -143,11 +143,13 @@ a {
 
 @media only screen and (max-width: 1024px) {
   #act-titleP {
-    font-size: 2.5rem; }
+    font-size: 1.5rem; }
   .act-title {
     padding-bottom: 1%;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
     text-align: center; }
+  #myemailpro {
+    font-size: 0.4rem; }
   .edP {
     display: none; } }
 
@@ -270,7 +272,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh; }
+  height: 80vh; }
 
 #edit-act-form form {
   align-self: center; }
