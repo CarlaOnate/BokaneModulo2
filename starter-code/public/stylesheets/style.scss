@@ -20,7 +20,21 @@
    #bokane-title{
 text-align: center;
    }
-  
+   #maile{
+     font-size: 0.7rem;
+   }
+   #imgCampi{
+    width:400px;
+   }
+   #bokaneSta{
+    width:85%;
+    display:flex; 
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align: justify;
+   }
+ 
 }
 @media only screen and (min-width: 1024px){//-------------------------------G
   #row-forms {
@@ -30,7 +44,20 @@ text-align: center;
     align-content: flex-end;
     justify-content: space-evenly;
    }
-  
+   #maile{
+    font-size: 1rem;
+  }
+  #imgCampi{
+width:650px;
+  }
+  #bokaneSta{
+    width:60%;
+    display:flex; 
+    justify-content:center;
+    align-items:flex-start;
+    flex-direction:column;
+    text-align: justify;
+  }
 }
 
 
@@ -335,11 +362,12 @@ a {
 }
 
 #edit-act-form{
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  
 }
 
 #edit-act-form form{
@@ -1018,8 +1046,8 @@ z-index: 20;
 #menuToggle span
 {
 display: block;
-width: 33px;
-height: 4px;
+width: 45px;
+height: 6px;
 margin-bottom: 5px;
 position: relative;
 
@@ -1118,7 +1146,7 @@ transform: none;
   }
   #intro-bokane{
     margin:20px; 
-    width:40%;
+    width:85%;
     display:flex; 
     justify-content:center;
     align-items:center;

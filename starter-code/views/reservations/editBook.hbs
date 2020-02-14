@@ -1,14 +1,14 @@
 
-<section style="height:60px">
+<section style="height:80px">
   </section>
 <section>
 <h4 id="msgError" style="color:rgb(255, 50, 50)" >{{msg}}</h4>
 </section>
 
-<section style="margin:0; display: flex; justify-content:center; "  id="edit-act-form">
+<section id="edit-act-form">
 
 
-<div class="w-25 text-center">
+<div class="">
   
   <form action="/reservation/edit/{{book._id}}" method="POST">
 
@@ -67,6 +67,9 @@
 
   </div>
 </section>
+<section style="height:60px">
+  </section>
+
 
 <input id="sDate" type="hidden" name="startDate" value={{book.startDate}}>
 <input id="eDate" type="hidden" name="endDate" value={{book.endDate}}>
