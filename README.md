@@ -26,6 +26,6 @@ If you want to try the admin mode, here is the username and password.
 ## Link to the deployed site
 http://www.bokane.life/
 
-# Careful
+### Careful
 This project has paypal implemented just to show how it can be used, if you enter your data paypal will charge you. Just dont pay anything.
 
