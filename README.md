@@ -3,7 +3,7 @@
 ## What is it?
 This is an app made for an ecoturistic resort. This project was made because it coveres a real necessity and we decided to do it.
 
-[Click here to see the project working]()
+[Click here to see the project working](http://www.bokane.life/)
 
 ## What does it do?
 This app main purpose is to be able to book rooms and activities and also be the main source of information for 
@@ -29,3 +29,6 @@ http://www.bokane.life/
 ### Careful
 This project has paypal implemented just to show how it can be used, if you enter your data paypal will charge you. Just dont pay anything.
 
+## Work Team
+**Jorge Aguilar** - *Web Developer* - [contact](https://www.linkedin.com/in/jorge-aguilar-castillo/)
+**Carla Oñate** - *Web Developer* - [contact](https://www.linkedin.com/in/carlaonate/)
