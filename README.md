@@ -30,5 +30,5 @@ http://www.bokane.life/
 This project has paypal implemented just to show how it can be used, if you enter your data paypal will charge you. Just dont pay anything.
 
 ## Work Team
-**Jorge Aguilar** - *Web Developer* - [contact](https://www.linkedin.com/in/jorge-aguilar-castillo/)
+**Jorge Aguilar** - *Web Developer* - [contact](https://www.linkedin.com/in/jorge-aguilar-castillo/)<br>
 **Carla Oñate** - *Web Developer* - [contact](https://www.linkedin.com/in/carlaonate/)
