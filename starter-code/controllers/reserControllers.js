@@ -78,13 +78,13 @@ exports.reserCheckView=(req,res,next)=>{
   let img='';
 switch (op){
 case '1':
-  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581613983/room1_obnryd.jpg'
+  img='https://res.cloudinary.com/jaacker25/image/upload/v1588561493/BOKANE/room1_rctil8.webp'
   break;
 case '2':
-  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581613983/room2_qcwwco.jpg'
+  img='https://res.cloudinary.com/jaacker25/image/upload/v1588561493/BOKANE/room2_tbrfc6.webp'
   break;
 case '3':
-  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581613984/room3_lcxeao.jpg'
+  img='https://res.cloudinary.com/jaacker25/image/upload/v1588561494/BOKANE/room3_oddrac.webp'
   break;
 }
   //-----------------------------------------------------------opijohiogiyfcccuiyfviuonpoopnnpiuiv
@@ -190,9 +190,12 @@ exports.reserBookPost= async(req,res,next)=>{
     if(!req.isAuthenticated()){
     await User.register({ name, email }, password)
     var user=await User.findOne({ email })
+    console.log(`nuevo= ${user}`)
     }else{
-      const {email}=req.user;
-      var user=await User.findOne({email})
+      console.log(`autenticado= ${req.user}`)
+      user=req.user;
+      //const {email}=req.user;
+      //var user=await User.findOne({email})
     }
   
 let nameRoom='';
@@ -200,15 +203,15 @@ let img='';
 switch (room){
 case '1':
   nameRoom='Carla Room'
-  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581615492/r1_pt1pvj.png'
+  img='https://res.cloudinary.com/jaacker25/image/upload/v1588561493/BOKANE/room1_rctil8.webp'
   break;
 case '2':
   nameRoom='Dova Room'
-  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581615492/r2_wezkii.png'
+  img='https://res.cloudinary.com/jaacker25/image/upload/v1588561493/BOKANE/room2_tbrfc6.webp'
   break;
 case '3':
   nameRoom='Avenu Place'
-  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581615492/r3_habxxx.png'
+  img='https://res.cloudinary.com/jaacker25/image/upload/v1588561494/BOKANE/room3_oddrac.webp'
   break;
 }
 //Define Fecha con hora de Entrada y Salida
@@ -230,15 +233,15 @@ const endDateS=Number(endDate)+(3600000*19);
   const id=reser._id
   await user.reservations.push(id)
   await user.save()
-
+/*
   passport.authenticate("local", { //se llama a si misma porque es un middleware.
     successRedirect: "/reservation/book-complete/${id}",
     failureRedirect: "/auth/login",
     failureFlash: true
 })(req, res, next)
+*/
 
-
-//  res.redirect(`/reservation/book-complete/${id}`)
+  res.redirect(`/reservation/book-complete/${id}`)
   }
 }
 
@@ -268,6 +271,14 @@ exports.reserCompPost=async(req,res,next)=>{
   if(digitalPayCheck){
   await Reservation.findByIdAndUpdate(id, {digitalPayment:digitalPayCheck})
   }
+/*
+  passport.authenticate("local", { //se llama a si misma porque es un middleware.
+  
+    successRedirect: "/profile",
+    failureRedirect: "/auth/login",
+    failureFlash: true
+})(req, res, next)
+*/
   res.redirect(`/profile`)
 }
 
@@ -324,13 +335,13 @@ if(days<=0){
 let img='';
 switch (room){
 case 'Carla Room':
-  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581615492/r1_pt1pvj.png'
+  img='https://res.cloudinary.com/jaacker25/image/upload/v1588561493/BOKANE/room1_rctil8.webp'
   break;
 case 'Dova Room':
-  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581615492/r2_wezkii.png'
+  img='https://res.cloudinary.com/jaacker25/image/upload/v1588561493/BOKANE/room2_tbrfc6.webp'
   break;
 case 'Avenu Place':
-  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581615492/r3_habxxx.png'
+  img='https://res.cloudinary.com/jaacker25/image/upload/v1588561494/BOKANE/room3_oddrac.webp'
   break;
 }
  const obj={

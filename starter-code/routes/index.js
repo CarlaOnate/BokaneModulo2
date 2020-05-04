@@ -16,7 +16,7 @@ router.get('/activities', actView)
 
 router.get('/about-us', aboutUsView)
 
-router.get('/terms', termsView)
+router.get('/conditions', termsView)
 
 //router.get('/reservation', reserView)
 

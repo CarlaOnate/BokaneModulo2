@@ -11,13 +11,13 @@ exports.activity = async (req, res) => {
 let img='';
 switch (activity){
 case 'kayak':
-  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581613982/act3_y1dzxz.png'
+  img='https://res.cloudinary.com/jaacker25/image/upload/v1588561491/BOKANE/act3_e3ncjf.webp'
   break;
 case 'climbing':
-  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581613982/act1_na40gb.png'
+  img='https://res.cloudinary.com/jaacker25/image/upload/v1588561491/BOKANE/act1_czpcs1.webp'
   break;
 case 'waterski':
-  img='https://res.cloudinary.com/dxxdamndt/image/upload/v1581613982/act2_eeqiq9.png'
+  img='https://res.cloudinary.com/jaacker25/image/upload/v1588561491/BOKANE/act2_v0g6zl.webp'
   break;
 }
     let newAct = await Activity.create({

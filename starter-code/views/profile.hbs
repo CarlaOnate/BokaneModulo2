@@ -22,10 +22,10 @@
      <div style="display: flex; align-items:flex-start;" class="portfolio-desc align-center card-img-overlay">
        <div class="folio-info">
          <br>
-         <h6 class="edP" style="text-align: center; font-size:  1rem;" ><b>{{this.user_id.name}}</b></h6>
-         <p class="edP" style="text-align: center;" ><b>{{this.typeAct}}</b></p>
-         <p class="edP" style="text-align: justify;" class="card-text">This activity was scheduled at <b>{{this.time}}</b> and the amount of people that will go are <b>{{this.numPeople}}</b></p>
-         <br><br>
+         <h6 class="edP" style="text-align: center; font-size:  0.9rem;" ><b>{{this.user_id.name}}</b></h6>
+         <p class="edP" style="text-align: center; font-size: 0.9" ><b>{{this.typeAct}}</b></p>
+         <p class="edP" style="text-align: justify; font-size: 0.8" class="card-text">This activity was scheduled at <b>{{this.time}}</b> and the amount of people that will go are <b>{{this.numPeople}}</b></p>
+         <br>
          <div style="display:flex; justify-content:space-between;">
          <a style="color:blue;" href="/activities/{{this._id}}" class="fancybox"><i class="far fa-edit fa-2x"></i></a>
          <a style="color: red; " href="/activities/delete/{{this._id}}" class="fancybox"><i class="far fa-trash-alt fa-2x"></i></a>
@@ -48,11 +48,11 @@
                   </div>
                   <div style="display: flex; align-items:flex-start;" class="portfolio-desc align-center card-img-overlay">
                     <div class="folio-info">
-                      <h6 class="edP" style="text-align: center; font-size:  1rem;" ><b>{{this.user_id.name}}</b></h6>
-                      <p class="edP"><b>From: </b>{{this.startDate}}</p>
-                      <p class="edP"><b>To: </b>{{this.endDate}}</p>
-                      <p class="edP">{{this.numAdult}} adults and {{this.numChild}} children</p>
-                      <p class="edP"><b>Room: </b>{{this.room}}</p>
+                      <h6 class="edP" style="text-align: center; font-size:  0.9rem;" ><b>{{this.user_id.name}}</b></h6>
+                      <p style="font-size: 0.8rem;" class="edP"><b>From: </b>{{this.startDate}}</p>
+                      <p style="font-size: 0.8rem;" class="edP"><b>To: </b>{{this.endDate}}</p>
+                      <p style="font-size: 0.8rem;" class="edP">{{this.numAdult}} adults and {{this.numChild}} children</p>
+                      <p style="font-size: 0.8rem;" class="edP"><b>Room: </b>{{this.room}}</p>
                         {{#if this.digitalPayment}}
                          <p class="edP">Payed</p>
                         {{/if}}

@@ -66,6 +66,7 @@ app.use('/activities', require('./routes/activities'))
 app.use('/auth', require('./routes/auth'))
 app.use('/', require('./routes/UDProfile'))
 app.use('/reservation', require('./routes/reservation'))
+app.use('/conditions', require('./routes/conditions'))
 
 
 module.exports = app;
